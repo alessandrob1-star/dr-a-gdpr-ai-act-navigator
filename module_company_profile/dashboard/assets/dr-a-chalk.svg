@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Dr. A con gessetto">
+  <rect width="240" height="240" rx="34" fill="#ffcc00"/>
+  <rect x="21" y="34" width="82" height="78" rx="8" fill="#0b5f4c" stroke="#001f68" stroke-width="6"/>
+  <path d="M37 58h48M37 76h35M37 94h22" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="137" cy="111" r="57" fill="#ffe1bd"/>
+  <path d="M77 99c15-43 36-48 49-31 11-34 43-34 51-1 23-10 42 13 33 39 21 11 12 43-13 39-2 35-40 48-60 23-23 18-60 1-53-34-25-2-31-29-7-35z" fill="#f7f7f7"/>
+  <circle cx="116" cy="111" r="7" fill="#16213d"/>
+  <circle cx="158" cy="111" r="7" fill="#16213d"/>
+  <path d="M122 138c10 8 25 8 35 0" fill="none" stroke="#16213d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M92 94c17 15 47 15 65 1" fill="none" stroke="#16213d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M92 194c8-33 29-48 45-48s37 15 45 48" fill="#ffffff"/>
+  <path d="M116 153l21 31 21-31" fill="#d8e3ff"/>
+  <path d="M78 191c30 20 91 20 120 0" fill="none" stroke="#001f68" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 128l-29-24" stroke="#ffe1bd" stroke-width="15" stroke-linecap="round"/>
+  <path d="M42 96l20 16" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+</svg>

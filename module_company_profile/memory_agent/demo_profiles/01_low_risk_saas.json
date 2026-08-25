@@ -1,0 +1,25 @@
+{
+  "questionnaire": "company_gdpr_ai_act_initial_assessment",
+  "version": "1.0",
+  "completed_at": "2026-06-25T10:00:00.000Z",
+  "answers": {
+    "company_name": "CalmDesk SaaS",
+    "contact_email": "privacy@calmdesk.example",
+    "industry": "software_saas",
+    "company_size": "micro",
+    "eu_presence": ["eu_company"],
+    "ai_usage": ["internal_ai"],
+    "ai_functions": ["content_generation"],
+    "ai_notice": "not_applicable",
+    "sensitive_domains": ["none"],
+    "delicate_ai_practices": ["none"],
+    "personal_data": ["contact_account"],
+    "profiling_decisions": ["no"],
+    "privacy_role": "controller",
+    "extra_eea_transfers": "no",
+    "extra_eea_providers": ["no"],
+    "controls": ["privacy_policy", "breach_process", "vendor_review", "records_processing"],
+    "dashboard_priority": "applicable_rules",
+    "notes": "Low-risk SaaS using AI only for internal drafting."
+  }
+}

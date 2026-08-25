@@ -1,0 +1,189 @@
+[
+  {
+    "title": "Draft high-risk AI classification guidance under the AI Act",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/ai-act/high-risk-guidance",
+    "kind": "scraped_item",
+    "status": "SCRAPED_MONITORED_ITEM",
+    "status_label": "Scraped monitored item",
+    "priority": "Review",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GENERAL",
+      "AI_ACT_HIGH_RISK"
+    ],
+    "summary": "Detected from a deterministic source-monitoring HTML sample.",
+    "recommended_attention": "Review extracted item"
+  },
+  {
+    "title": "EDPB guidance on DPIA and high risk processing under GDPR Article 35",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/privacy/dpia",
+    "kind": "scraped_item",
+    "status": "SCRAPED_MONITORED_ITEM",
+    "status_label": "Scraped monitored item",
+    "priority": "Review",
+    "regulation_area": "GDPR",
+    "topic_labels": [
+      "GDPR_GENERAL",
+      "GDPR_DPIA"
+    ],
+    "summary": "Detected from a deterministic source-monitoring HTML sample.",
+    "recommended_attention": "Review extracted item"
+  },
+  {
+    "title": "AI Act enters into force",
+    "source": "EUR-Lex Official Journal",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "kind": "regulatory_event",
+    "status": "A_OFFICIALLY_PUBLISHED",
+    "status_label": "Official publication",
+    "priority": "High",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GENERAL"
+    ],
+    "summary": "The EU AI Act has entered into force and creates phased obligations for AI providers and deployers operating in the EU.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "AI Act prohibited practices guidance",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GENERAL",
+      "AI_ACT_PROHIBITED_PRACTICES"
+    ],
+    "summary": "Official Commission guidance clarifies prohibited AI practices under the AI Act.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "Draft high-risk AI classification guidance",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GENERAL",
+      "AI_ACT_HIGH_RISK"
+    ],
+    "summary": "Draft guidance explains how high-risk AI systems may be classified under Annex I and Annex III of the AI Act.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "AI Act transparency obligations guidance",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GENERAL",
+      "AI_ACT_TRANSPARENCY"
+    ],
+    "summary": "Official draft guidance addresses transparency obligations for certain AI systems under Article 50 of the AI Act.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "GPAI Code of Practice chapters",
+    "source": "European Commission AI Office",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "AI_ACT",
+    "topic_labels": [
+      "AI_ACT_GPAI"
+    ],
+    "summary": "Code of Practice materials provide guidance for general-purpose AI model providers, including transparency, copyright, safety, and security.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "EDPB data breach notification guidance",
+    "source": "EDPB Guidelines and Recommendations",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "GDPR",
+    "topic_labels": [
+      "GDPR_DATA_BREACH",
+      "GDPR_GENERAL"
+    ],
+    "summary": "EDPB guidance explains personal data breach notification obligations under the GDPR.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "EDPB DPIA guidance",
+    "source": "EDPB Guidelines and Recommendations",
+    "url": "https://ec.europa.eu/newsroom/article29/items/611236/en",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "GDPR",
+    "topic_labels": [
+      "GDPR_DPIA",
+      "GDPR_GENERAL"
+    ],
+    "summary": "DPIA guidance helps identify processing likely to result in high risk under GDPR Article 35.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "GDPR international transfer supplementary measures",
+    "source": "EDPB Guidelines and Recommendations",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "High",
+    "regulation_area": "GDPR",
+    "topic_labels": [
+      "GDPR_GENERAL",
+      "GDPR_INTERNATIONAL_TRANSFERS"
+    ],
+    "summary": "EDPB recommendations explain supplementary measures for personal data transfers outside the EU.",
+    "recommended_attention": "Action recommended"
+  },
+  {
+    "title": "News warning on GDPR and AI Act interplay",
+    "source": "IAPP News",
+    "url": "https://iapp.org/news/",
+    "kind": "regulatory_event",
+    "status": "C_UNCONFIRMED_NEWS",
+    "status_label": "Trusted news warning",
+    "priority": "Medium",
+    "regulation_area": "GDPR_AI_ACT_INTERPLAY",
+    "topic_labels": [
+      "AI_ACT_GENERAL",
+      "GDPR_GENERAL"
+    ],
+    "summary": "A trusted privacy news source reports upcoming guidance on the interaction between GDPR and AI Act obligations.",
+    "recommended_attention": "Review"
+  },
+  {
+    "title": "Political agreement on AI rule simplification",
+    "source": "European Commission Digital Strategy News",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens",
+    "kind": "regulatory_event",
+    "status": "B_OFFICIAL_DRAFT",
+    "status_label": "Official draft/guidance",
+    "priority": "Medium",
+    "regulation_area": "AI_ACT_SIMPLIFICATION",
+    "topic_labels": [],
+    "summary": "An official EU announcement reports political agreement on simplifying certain AI rules, but final legal publication should be monitored.",
+    "recommended_attention": "Review"
+  }
+]

@@ -1,0 +1,39 @@
+services:
+  memory-agent:
+    build:
+      context: ..
+      dockerfile: module_company_profile/Dockerfile
+    image: ai-company-memory-agent:local
+    environment:
+      ASSISTANT_NAME: ${ASSISTANT_NAME:-Dr. A}
+      MODEL_PROVIDER: ${MODEL_PROVIDER:-openai}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LOCAL_MODEL_ENDPOINT: ${LOCAL_MODEL_ENDPOINT:-}
+      LOCAL_MODEL_NAME: ${LOCAL_MODEL_NAME:-qwen2.5:14b-instruct}
+      LOCAL_MODEL_API_KEY: ${LOCAL_MODEL_API_KEY:-}
+    volumes:
+      - ../storage/company_profile/input:/app/input
+      - ../storage/company_profile/output:/app/output
+      - ../storage/web_scraping_outputs:/app/storage/web_scraping_outputs:ro
+    command: ["/app/input/questionnaire_answers.json", "--out", "/app/output"]
+
+  dashboard:
+    build:
+      context: ..
+      dockerfile: module_company_profile/Dockerfile
+    image: ai-company-memory-agent:local
+    environment:
+      ASSISTANT_NAME: ${ASSISTANT_NAME:-Dr. A}
+      MODEL_PROVIDER: ${MODEL_PROVIDER:-openai}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LOCAL_MODEL_ENDPOINT: ${LOCAL_MODEL_ENDPOINT:-}
+      LOCAL_MODEL_NAME: ${LOCAL_MODEL_NAME:-qwen2.5:14b-instruct}
+      LOCAL_MODEL_API_KEY: ${LOCAL_MODEL_API_KEY:-}
+      DASHBOARD_PORT: "8771"
+      DASHBOARD_HOST: "0.0.0.0"
+    volumes:
+      - ../storage/web_scraping_outputs:/app/storage/web_scraping_outputs
+      - ../storage/company_profile:/app/storage/company_profile
+    ports:
+      - "127.0.0.1:8771:8771"
+    entrypoint: ["python", "/app/module_company_profile/dashboard/dashboard_server.py"]

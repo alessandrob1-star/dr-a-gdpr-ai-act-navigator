@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. G.D.P.R. &amp; AI Act navigator - Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+  <!-- Shared application shell: branding and local language selection. -->
+  <header class="app-header">
+    <div class="topbar">
+      <div class="brand-block">
+        <span class="eyebrow">EU AI Act readiness</span>
+        <h1>Dr. G.D.P.R. &amp; AI Act navigator</h1>
+        <div class="language-row">
+          <label for="languageSelect" data-i18n="language_label">Language</label>
+          <select id="languageSelect" class="form-select form-select-sm">
+            <option value="sq">Shqip</option>
+            <option value="bg">Balgarski</option>
+            <option value="cs">Cestina</option>
+            <option value="da">Dansk</option>
+            <option value="de">Deutsch</option>
+            <option value="et">Eesti</option>
+            <option value="el">Ellinika</option>
+            <option value="en" selected>English</option>
+            <option value="es">Espanol</option>
+            <option value="fr">Francais</option>
+            <option value="ga">Gaeilge</option>
+            <option value="hr">Hrvatski</option>
+            <option value="it">Italiano</option>
+            <option value="lv">Latviesu</option>
+            <option value="lt">Lietuviu</option>
+            <option value="hu">Magyar</option>
+            <option value="mt">Malti</option>
+            <option value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="pt">Portugues</option>
+            <option value="ro">Romana</option>
+            <option value="sk">Slovencina</option>
+            <option value="sl">Slovenscina</option>
+            <option value="fi">Suomi</option>
+            <option value="sv">Svenska</option>
+          </select>
+          <span id="languageFlag" class="language-flag" role="img" aria-label="English flag" title="English"></span>
+        </div>
+      </div>
+      <div class="status server-pill" id="serverStatus" aria-live="polite" hidden></div>
+    </div>
+  </header>
+
+  <!-- Primary navigation keeps questionnaire and results in one local app. -->
+  <nav class="nav-tabs app-tabs" aria-label="Application views">
+    <div class="app-page-tabs" role="tablist" aria-label="Application pages">
+      <button id="questionnaireTab" class="btn active" type="button" role="tab" aria-selected="true" aria-controls="questionnairePage" data-page-target="questionnairePage" data-i18n="questionnaire_tab">Questionnaire</button>
+      <button id="dashboardTab" class="btn" type="button" role="tab" aria-selected="false" aria-controls="dashboardPage" data-page-target="dashboardPage">Dashboard</button>
+      <button id="progressTab" class="btn" type="button" role="tab" aria-selected="false" aria-controls="progressPage" data-page-target="progressPage" data-i18n="progress_tab">Progress</button>
+    </div>
+    <button id="helpButton" class="btn" type="button" aria-haspopup="dialog" aria-controls="contextHelp" data-i18n="help_tab">Help</button>
+  </nav>
+
+  <!-- Contextual guidance is kept separate from the application and agent logic. -->
+  <div class="context-help" id="contextHelp" role="dialog" aria-modal="true" aria-labelledby="contextHelpTitle" hidden>
+    <div class="context-help-backdrop" data-help-close aria-hidden="true"></div>
+    <section class="context-help-dialog">
+      <header class="context-help-header">
+        <h2 id="contextHelpTitle" data-i18n="help_tab">Help</h2>
+        <button class="context-help-close" id="contextHelpClose" type="button" data-help-close aria-label="Close help">&times;</button>
+      </header>
+      <div class="context-help-body" id="contextHelpBody"></div>
+    </section>
+  </div>
+  <button class="btn floating-help" id="floatingHelpButton" type="button" aria-haspopup="dialog" aria-controls="contextHelp" data-i18n="help_tab" hidden>Help</button>
+
+  <!-- Questionnaire view: input, saved-profile loading, and demo scenarios. -->
+  <main id="questionnairePage" class="page active" role="tabpanel" aria-labelledby="questionnaireTab">
+    <section class="panel">
+      <h2 data-i18n="questionnaire_title">Questionario azienda</h2>
+      <p class="status" data-i18n="questionnaire_intro">Compila, modifica i flag, carica un questionario gia' compilato o usa un demo. Poi calcola la valutazione e passa alla dashboard.</p>
+      <div class="upload">
+        <div class="custom-file-picker">
+          <input class="questionnaire-file-input" type="file" id="questionnaireFile" accept=".json,application/json" aria-label="Questionnaire JSON file">
+          <label class="custom-file-button" for="questionnaireFile" data-i18n="choose_file">Scegli file</label>
+          <span class="custom-file-name" id="questionnaireFileName" data-i18n="no_file_selected">Nessun file selezionato</span>
+        </div>
+        <button class="btn btn-primary" type="button" id="loadQuestionnaireFile" data-i18n="load_questionnaire">Carica questionario</button>
+      </div>
+      <div class="demo-buttons">
+        <button class="btn btn-outline-primary secondary" type="button" data-demo-questionnaire="low-risk-saas" data-i18n="demo_saas" aria-pressed="false">Demo SaaS basso rischio</button>
+        <button class="btn btn-outline-primary secondary" type="button" data-demo-questionnaire="hr-ai" data-i18n="demo_hr" aria-pressed="false">Demo HR AI alto rischio</button>
+        <button class="btn btn-outline-primary secondary" type="button" data-demo-questionnaire="gpai-provider" data-i18n="demo_gpai" aria-pressed="false">Demo GPAI provider</button>
+      </div>
+      <div class="profile-history-controls">
+        <select id="savedProfiles" class="form-select" aria-label="Saved profile history">
+          <option value="" data-i18n="saved_profiles">Saved profile history</option>
+        </select>
+        <select id="compareProfile" class="form-select" aria-label="Comparison snapshot">
+          <option value="" data-i18n="compare_with">Compare with...</option>
+        </select>
+        <button class="btn btn-outline-primary secondary" type="button" id="saveProfile" data-i18n="save_profile">Save assessment snapshot</button>
+        <button class="btn btn-outline-primary secondary" type="button" id="loadSavedProfile" data-i18n="load_saved_profile">Load saved snapshot</button>
+        <button class="btn btn-outline-primary secondary" type="button" id="compareProfiles" data-i18n="compare_profiles">Compare snapshots</button>
+        <button class="btn btn-outline-danger secondary danger" type="button" id="deleteSavedProfile" data-i18n="delete_profile">Delete snapshot</button>
+      </div>
+      <div id="profileComparison" class="profile-comparison" hidden></div>
+      <div id="questionnaireLanguageWarning" class="language-warning" data-i18n="questionnaire_language_warning">Il dizionario completo del questionario per questa lingua non e' ancora disponibile: il questionario resta in italiano.</div>
+    </section>
+
+    <section class="panel">
+      <div id="questionnaireForm" class="questionnaire-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="questionnaire-actions">
+        <button class="btn btn-primary" type="button" id="evaluateQuestionnaire" data-i18n="evaluate_questionnaire">Calcola valutazione</button>
+        <button class="btn btn-outline-primary secondary" type="button" id="downloadQuestionnaire" data-i18n="download_questionnaire">Scarica questionario</button>
+        <button class="btn btn-outline-primary secondary" type="button" id="goDashboard" data-i18n="go_dashboard">Vai alla dashboard</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Progress view: visualises deterministic assessment and snapshot history. -->
+  <main id="progressPage" class="page" role="tabpanel" aria-labelledby="progressTab" hidden>
+    <section class="panel progress-heading">
+      <div>
+        <span class="eyebrow progress-eyebrow" data-i18n="progress_eyebrow">Operational readiness</span>
+        <h2 data-i18n="progress_title">Progress and implementation overview</h2>
+        <p class="status" data-i18n="progress_intro">Track risk attention, control coverage, priorities, deadlines, and assessment history from the current company profile.</p>
+      </div>
+      <p class="progress-disclaimer" data-i18n="progress_disclaimer">These indicators support planning and do not certify legal compliance.</p>
+    </section>
+
+    <section class="progress-layout" aria-live="polite">
+      <div id="progressEmpty" class="panel empty" data-i18n="no_profile_progress">Load or calculate an assessment to display progress.</div>
+      <div id="progressContent" hidden>
+        <section class="progress-metrics" id="progressMetrics"></section>
+
+        <div class="progress-chart-grid">
+          <section class="panel progress-chart-card">
+            <h2 data-i18n="control_coverage">Control coverage</h2>
+            <div id="controlCoverageChart"></div>
+          </section>
+          <section class="panel progress-chart-card">
+            <h2 data-i18n="priority_distribution">Priority distribution</h2>
+            <div id="priorityDistributionChart"></div>
+          </section>
+        </div>
+
+        <section class="panel progress-chart-card">
+          <h2 data-i18n="deadline_outlook">Deadline outlook</h2>
+          <div id="deadlineOutlook"></div>
+        </section>
+
+        <section class="panel action-workspace" aria-labelledby="actionWorkspaceTitle">
+          <div class="action-workspace-heading">
+            <div>
+              <span class="eyebrow">Human-approved execution</span>
+              <h2 id="actionWorkspaceTitle">Compliance Action Workspace</h2>
+              <p class="status">Turn validated missing controls into owned, approved, and evidence-backed work. This workflow is currently available in English.</p>
+            </div>
+            <div id="actionPlanSummary" class="action-plan-summary"></div>
+          </div>
+          <div id="actionPlanFeedback" class="status action-plan-feedback" role="status"></div>
+          <div id="actionPlanList" class="action-plan-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dashboard view: deterministic results, matched sources, and Dr. A. -->
+  <main id="dashboardPage" class="page" role="tabpanel" aria-labelledby="dashboardTab" hidden>
+    <div class="workspace">
+      <div id="feedNotice" class="demo-notice" data-i18n="demo_notice">MODALITA' DEMO: gli aggiornamenti provengono dal dataset locale. Premi Aggiorna notizie per leggere le fonti ufficiali online.</div>
+
+      <section class="panel">
+        <h2 data-i18n="score_priority">Score e priorita'</h2>
+        <div id="summary" class="empty" data-i18n="empty_summary">Carica il JSON scaricato dal questionario per vedere la dashboard personalizzata.</div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="warnings_controls">Warning e controlli</h2>
+        <div id="warnings" class="empty" data-i18n="empty_profile">Nessun profilo caricato.</div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="compliance_timeline">Compliance timeline</h2>
+        <p class="status" data-i18n="timeline_notice">Dates are personalised from the current profile and must be verified against the linked official source.</p>
+        <div id="timeline" class="timeline empty" data-i18n="empty_profile">Nessun profilo caricato.</div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="regulatory_events">Eventi normativi rilevanti</h2>
+        <div id="events" class="feed empty" data-i18n="empty_profile">Nessun profilo caricato.</div>
+      </section>
+
+      <section class="panel">
+        <div class="event-top">
+          <h2 data-i18n="filtered_news">Aggiornamenti rilevanti per il profilo</h2>
+          <button class="btn btn-primary" type="button" id="refreshNews" data-i18n="refresh_news">Aggiorna notizie</button>
+        </div>
+        <div id="news" class="feed empty" data-i18n="empty_profile">Nessun profilo caricato.</div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="early_warning_title">Segnali anticipatori da fonti affidabili</h2>
+        <p class="early-warning-notice" data-i18n="early_warning_notice">
+          Analisi e notizie non vincolanti: non sono leggi e devono essere verificate su fonti ufficiali.
+        </p>
+        <div id="earlyWarnings" class="feed empty" data-i18n="empty_profile">Nessun profilo caricato.</div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="export_report">Export compliance report</h2>
+        <div class="report-actions">
+          <button class="btn btn-outline-primary secondary" type="button" id="exportPdf" data-report-format="pdf">PDF</button>
+          <button class="btn btn-outline-primary secondary" type="button" id="exportDocx" data-report-format="docx">Word (.docx)</button>
+        </div>
+      </section>
+    </div>
+
+    <button class="chatbot-launcher" type="button" id="chatbotLauncher" aria-controls="assistantPanel" aria-expanded="false" aria-label="Open Dr. A chat">
+      <img src="assets/dr-a-avatar.webp" alt="">
+    </button>
+
+    <aside class="panel" id="assistantPanel">
+      <button class="btn btn-light chatbot-close" type="button" id="chatbotClose" aria-label="Close Dr. A chat">×</button>
+      <div class="assistant-card">
+        <div class="avatar-button" aria-hidden="true">
+          <img id="assistantAvatar" src="assets/dr-a-avatar.webp" alt="">
+        </div>
+        <div>
+          <h2 class="assistant-title" data-i18n="chatbot">Dr. A</h2>
+          <p class="assistant-disclaimer" data-i18n="assistant_disclaimer">
+            Dr. A uses an AI model that cross-references the company profile, regulatory sources, and news. Its answers are not legal advice or a guarantee of legal compliance.
+          </p>
+        </div>
+      </div>
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite" aria-relevant="additions text">
+      </div>
+      <div class="chat-actions">
+        <textarea class="form-control" id="chatInput" aria-label="Question for Dr. A" placeholder="Es. Quali sono le prime tre cose da fare per questa azienda?"></textarea>
+        <button class="btn btn-primary" type="button" id="sendChat" data-i18n="send_question">Invia domanda</button>
+      </div>
+    </aside>
+  </main>
+
+  <div id="appFeedback" class="app-feedback" role="status" aria-live="polite" hidden></div>
+
+  <!-- Safe Markdown dependencies must load before application chat code. -->
+  <script src="assets/js/marked.min.js"></script>
+  <script src="assets/js/safe-markdown.js"></script>
+
+  <!-- One self-contained, presentation-friendly dictionary per language. -->
+  <script src="assets/js/i18n/locales/sq.js"></script>
+  <script src="assets/js/i18n/locales/bg.js"></script>
+  <script src="assets/js/i18n/locales/cs.js"></script>
+  <script src="assets/js/i18n/locales/da.js"></script>
+  <script src="assets/js/i18n/locales/de.js"></script>
+  <script src="assets/js/i18n/locales/el.js"></script>
+  <script src="assets/js/i18n/locales/en.js"></script>
+  <script src="assets/js/i18n/locales/es.js"></script>
+  <script src="assets/js/i18n/locales/et.js"></script>
+  <script src="assets/js/i18n/locales/fi.js"></script>
+  <script src="assets/js/i18n/locales/fr.js"></script>
+  <script src="assets/js/i18n/locales/ga.js"></script>
+  <script src="assets/js/i18n/locales/hr.js"></script>
+  <script src="assets/js/i18n/locales/hu.js"></script>
+  <script src="assets/js/i18n/locales/it.js"></script>
+  <script src="assets/js/i18n/locales/lt.js"></script>
+  <script src="assets/js/i18n/locales/lv.js"></script>
+  <script src="assets/js/i18n/locales/mt.js"></script>
+  <script src="assets/js/i18n/locales/nl.js"></script>
+  <script src="assets/js/i18n/locales/pl.js"></script>
+  <script src="assets/js/i18n/locales/pt.js"></script>
+  <script src="assets/js/i18n/locales/ro.js"></script>
+  <script src="assets/js/i18n/locales/sk.js"></script>
+  <script src="assets/js/i18n/locales/sl.js"></script>
+  <script src="assets/js/i18n/locales/sv.js"></script>
+  <script src="assets/js/i18n/core.js"></script>
+  <script src="assets/js/help.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/events.js"></script>
+</body>
+</html>

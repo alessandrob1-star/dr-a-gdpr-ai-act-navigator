@@ -1,0 +1,92 @@
+# Tooling configuration for Dr. G.D.P.R. & AI Act navigator.
+#
+# This project has no build step and is not published as a package; this file
+# exists to give the codebase an enforced quality gate:
+#   * ruff  - formatter + linter (run in CI via `ruff format --check` and `ruff check`)
+#   * mypy  - static type checking for the already type-hinted modules
+#
+# Local usage:
+#   ruff format .        # apply the canonical format
+#   ruff check . --fix   # lint and auto-fix the safe rules
+#   mypy                 # type-check the configured packages
+
+[tool.ruff]
+# The existing code targets roughly 100 columns; keep that to match author
+# intent and minimise reformatting churn.
+line-length = 100
+target-version = "py312"
+extend-exclude = ["build", "dist", "*/__pycache__/*"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort (import ordering)
+    "B",    # flake8-bugbear (likely bugs)
+    "UP",   # pyupgrade (modern syntax)
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "BLE",  # flake8-blind-except (documents intentional blind excepts via noqa)
+]
+ignore = [
+    # The formatter owns line width. Long, unsplittable string literals,
+    # regexes, and legal-source URLs are expected to exceed the limit; the
+    # `ruff format --check` step still enforces width wherever it can wrap.
+    "E501",
+    # Ambiguous-unicode rules would flag legitimate multilingual content. This
+    # application intentionally ships text in all 25 supported languages
+    # (Greek, Cyrillic, accented Latin, etc.).
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    # `class X(str, Enum)` in the policy layer is intentional. Converting to
+    # StrEnum changes `str(member)` output and touches security-critical guard
+    # code for no functional benefit.
+    "UP042",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Standalone package smoke scripts intentionally adjust sys.path before their
+# imports so they can run in isolation.
+"**/smoke.py" = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "policy_agent",
+    "module_web_scraping",
+    "module_company_profile",
+    "module_agents",
+]
+
+[tool.mypy]
+python_version = "3.12"
+# Application modules use canonical package imports so mypy and Python do not
+# load the same implementation under multiple module names.
+explicit_package_bases = true
+# Third-party packages without type stubs (reportlab, python-docx) and the
+# path-injected local modules should not fail the type check.
+ignore_missing_imports = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+# Keep the initial gate achievable: check that annotations are internally
+# consistent without yet requiring every function to be fully annotated.
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+# Test discovery for the unittest-based suites. Listing the test directories
+# here means a new test_*.py file is picked up automatically, so CI no longer
+# depends on a hand-maintained list of modules.
+#
+# importlib import mode lets pytest collect tests from directories that are not
+# packages (some test dirs intentionally have no __init__.py) without polluting
+# sys.path, matching how the modules are laid out.
+addopts = "--import-mode=importlib -ra"
+testpaths = [
+    "policy_agent/tests",
+    "module_agents/tests",
+    "module_company_profile/tests",
+    "module_web_scraping/tests",
+]
+python_files = ["test_*.py"]

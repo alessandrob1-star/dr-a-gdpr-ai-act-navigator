@@ -1,0 +1,25 @@
+{
+  "questionnaire": "company_gdpr_ai_act_initial_assessment",
+  "version": "1.0",
+  "completed_at": "2026-06-25T10:00:00.000Z",
+  "answers": {
+    "company_name": "Acme HR AI",
+    "contact_email": "privacy@acme.example",
+    "industry": "hr_recruiting",
+    "company_size": "small",
+    "eu_presence": ["eu_company", "eu_customers"],
+    "ai_usage": ["customer_product_ai", "in_house_ai"],
+    "ai_functions": ["classification", "scoring", "decision_support"],
+    "ai_notice": "not_prominent",
+    "sensitive_domains": ["recruiting", "workers"],
+    "delicate_ai_practices": ["none"],
+    "personal_data": ["employees_candidates", "tracking_analytics"],
+    "profiling_decisions": ["profiling", "human_review_decision_support"],
+    "privacy_role": "controller",
+    "extra_eea_transfers": "unknown",
+    "extra_eea_providers": ["ai_api_models"],
+    "controls": ["privacy_policy", "breach_process"],
+    "dashboard_priority": "main_risks",
+    "notes": "Demo company for initial matching."
+  }
+}

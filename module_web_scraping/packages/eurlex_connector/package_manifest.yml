@@ -1,0 +1,17 @@
+name: eurlex_connector
+status: draft
+owner_area: web_scraping
+runtime: python:3.12-slim
+purpose: Build and later execute official EUR-Lex SOAP queries.
+default_command: python smoke.py
+inputs:
+  - config/eurlex_credentials.json
+  - CELEX identifiers
+  - keyword query terms
+outputs:
+  - SOAP request envelopes
+  - EUR-Lex response summaries
+next_steps:
+  - Add credentials handling through environment variables.
+  - Add XML response normalization fixtures.
+  - Add retries and rate-limit handling.

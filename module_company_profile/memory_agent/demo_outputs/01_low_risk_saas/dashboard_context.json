@@ -1,0 +1,679 @@
+{
+  "company_name": "CalmDesk SaaS",
+  "compliance_score": {
+    "score": 44,
+    "band": "medium",
+    "label": "Medium attention",
+    "explanation": "Score combines relevance tags and missing controls. It is for prioritization, not legal classification.",
+    "raw_score": 44,
+    "breakdown": [
+      {
+        "type": "relevance_rule",
+        "rule_id": "gdpr_relevant",
+        "label": "GDPR relevance likely",
+        "points": 14,
+        "triggered_by": [
+          {
+            "question_key": "eu_presence",
+            "selected_values": [
+              "eu_company"
+            ]
+          },
+          {
+            "question_key": "personal_data",
+            "selected_values": [
+              "contact_account"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 2-3, 5, 24 and 30"
+        ],
+        "recommended_action": "Confirm the processing inventory, lawful bases, notices, roles, and records of processing."
+      },
+      {
+        "type": "relevance_rule",
+        "rule_id": "ai_act_relevant",
+        "label": "AI Act relevance likely",
+        "points": 14,
+        "triggered_by": [
+          {
+            "question_key": "eu_presence",
+            "selected_values": [
+              "eu_company"
+            ]
+          },
+          {
+            "question_key": "ai_usage",
+            "selected_values": [
+              "internal_ai"
+            ]
+          }
+        ],
+        "legal_references": [
+          "AI Act Articles 2-4 and 16-27"
+        ],
+        "recommended_action": "Document the AI value-chain role and classify each AI system before deployment."
+      },
+      {
+        "type": "missing_controls",
+        "rule_id": "missing_controls",
+        "label": "Missing or unverified controls",
+        "points": 16,
+        "triggered_by": [
+          {
+            "question_key": "controls",
+            "missing_values": [
+              "AI system documentation",
+              "Internal AI policy",
+              "Data subject rights process",
+              "AI or privacy training"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 12-22, 24, 30 and 32",
+          "AI Act Article 4"
+        ],
+        "recommended_action": "Assign owners and evidence for each missing or unverified control."
+      }
+    ]
+  },
+  "assessment_trace": [
+    {
+      "type": "relevance_rule",
+      "rule_id": "gdpr_relevant",
+      "label": "GDPR relevance likely",
+      "points": 14,
+      "triggered_by": [
+        {
+          "question_key": "eu_presence",
+          "selected_values": [
+            "eu_company"
+          ]
+        },
+        {
+          "question_key": "personal_data",
+          "selected_values": [
+            "contact_account"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 2-3, 5, 24 and 30"
+      ],
+      "recommended_action": "Confirm the processing inventory, lawful bases, notices, roles, and records of processing."
+    },
+    {
+      "type": "relevance_rule",
+      "rule_id": "ai_act_relevant",
+      "label": "AI Act relevance likely",
+      "points": 14,
+      "triggered_by": [
+        {
+          "question_key": "eu_presence",
+          "selected_values": [
+            "eu_company"
+          ]
+        },
+        {
+          "question_key": "ai_usage",
+          "selected_values": [
+            "internal_ai"
+          ]
+        }
+      ],
+      "legal_references": [
+        "AI Act Articles 2-4 and 16-27"
+      ],
+      "recommended_action": "Document the AI value-chain role and classify each AI system before deployment."
+    },
+    {
+      "type": "missing_controls",
+      "rule_id": "missing_controls",
+      "label": "Missing or unverified controls",
+      "points": 16,
+      "triggered_by": [
+        {
+          "question_key": "controls",
+          "missing_values": [
+            "AI system documentation",
+            "Internal AI policy",
+            "Data subject rights process",
+            "AI or privacy training"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 12-22, 24, 30 and 32",
+        "AI Act Article 4"
+      ],
+      "recommended_action": "Assign owners and evidence for each missing or unverified control."
+    }
+  ],
+  "risk_warnings": [
+    {
+      "level": "medium",
+      "title": "Missing controls",
+      "message": "Some expected controls are missing or unclear: AI system documentation, Internal AI policy, Data subject rights process, AI or privacy training.",
+      "triggered_by": [
+        {
+          "question_key": "controls",
+          "missing_values": [
+            "AI system documentation",
+            "Internal AI policy",
+            "Data subject rights process",
+            "AI or privacy training"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Article 24",
+        "AI Act Articles 9 and 17"
+      ],
+      "recommended_action": "Assign owners and evidence for each missing or unverified control."
+    }
+  ],
+  "relevance_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant"
+  ],
+  "dashboard_cards": [
+    {
+      "tag": "gdpr_relevant",
+      "title": "GDPR relevance likely",
+      "summary": "The company likely needs a GDPR relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "ai_act_relevant",
+      "title": "AI Act relevance likely",
+      "summary": "The company likely needs an AI Act relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "missing_controls",
+      "title": "Controls to verify",
+      "summary": "Missing or unclear controls: AI system documentation, Internal AI policy, Data subject rights process, AI or privacy training",
+      "priority": "medium"
+    }
+  ],
+  "matched_regulatory_events": [
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "AI Act enters into force",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "status": "A_OFFICIALLY_PUBLISHED",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "The EU AI Act has entered into force and creates phased obligations for AI providers and deployers operating in the EU.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "AI Act prohibited practices guidance",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL",
+        "AI_ACT_PROHIBITED_PRACTICES"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "Official Commission guidance clarifies prohibited AI practices under the AI Act.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "Draft high-risk AI classification guidance",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL",
+        "AI_ACT_HIGH_RISK"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "Draft guidance explains how high-risk AI systems may be classified under Annex I and Annex III of the AI Act.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "duplicate_count": 2,
+      "related_sources": [
+        {
+          "title": "AI Act transparency obligations guidance",
+          "source": null,
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+          "is_official": true,
+          "legal_status": null
+        }
+      ]
+    },
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "GDPR_GENERAL"
+      ],
+      "title": "EDPB data breach notification guidance",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_DATA_BREACH",
+        "GDPR_GENERAL"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "EDPB guidance explains personal data breach notification obligations under the GDPR.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "GDPR_GENERAL"
+      ],
+      "title": "EDPB DPIA guidance",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_DPIA",
+        "GDPR_GENERAL"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "DPIA guidance helps identify processing likely to result in high risk under GDPR Article 35.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://ec.europa.eu/newsroom/article29/items/611236/en",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "GDPR_GENERAL"
+      ],
+      "title": "GDPR international transfer supplementary measures",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_GENERAL",
+        "GDPR_INTERNATIONAL_TRANSFERS"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Medium",
+      "priority_score": 62,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source"
+      ],
+      "declared_priority": "High",
+      "summary": "EDPB recommendations explain supplementary measures for personal data transfers outside the EU.",
+      "source": null,
+      "retrieved_at": "2026-07-05 19:25:42.873213",
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+      "duplicate_count": 1,
+      "related_sources": []
+    }
+  ],
+  "matched_news_feed": [
+    {
+      "match_score": 42,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "AI Act enters into force",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "status": "A_OFFICIALLY_PUBLISHED",
+      "priority": "High",
+      "priority_score": 67,
+      "priority_reasons": [
+        "Company-profile relevance: 42/100",
+        "Source pipeline marked the item as high priority",
+        "Official or officially evidenced source",
+        "Validated publication status"
+      ],
+      "declared_priority": "High",
+      "summary": "The EU AI Act has entered into force and creates phased obligations for AI providers and deployers operating in the EU.",
+      "source": "EUR-Lex Official Journal",
+      "retrieved_at": null,
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": true,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 48,
+      "matched_topics": [
+        "AI_ACT_GENERAL",
+        "GDPR_GENERAL"
+      ],
+      "title": "News warning on GDPR and AI Act interplay",
+      "regulation_area": "GDPR_AI_ACT_INTERPLAY",
+      "topic_labels": [
+        "AI_ACT_GENERAL",
+        "GDPR_GENERAL"
+      ],
+      "status": "C_UNCONFIRMED_NEWS",
+      "priority": "Medium",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Company-profile relevance: 48/100",
+        "Non-binding early-warning source"
+      ],
+      "declared_priority": "Medium",
+      "summary": "A trusted privacy news source reports upcoming guidance on the interaction between GDPR and AI Act obligations.",
+      "source": "IAPP News",
+      "retrieved_at": null,
+      "recommended_attention": "Review",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": false,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://iapp.org/news/",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 36,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "AI Act prohibited practices guidance",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL",
+        "AI_ACT_PROHIBITED_PRACTICES"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Low",
+      "priority_score": 38,
+      "priority_reasons": [
+        "Company-profile relevance: 36/100",
+        "Source pipeline marked the item as high priority",
+        "Non-binding early-warning source"
+      ],
+      "declared_priority": "High",
+      "summary": "Official Commission guidance clarifies prohibited AI practices under the AI Act.",
+      "source": "European Commission AI Office",
+      "retrieved_at": null,
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": false,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 36,
+      "matched_topics": [
+        "AI_ACT_GENERAL"
+      ],
+      "title": "Draft high-risk AI classification guidance",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL",
+        "AI_ACT_HIGH_RISK"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Low",
+      "priority_score": 38,
+      "priority_reasons": [
+        "Company-profile relevance: 36/100",
+        "Source pipeline marked the item as high priority",
+        "Non-binding early-warning source"
+      ],
+      "declared_priority": "High",
+      "summary": "Draft guidance explains how high-risk AI systems may be classified under Annex I and Annex III of the AI Act.",
+      "source": "European Commission AI Office",
+      "retrieved_at": null,
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": false,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "duplicate_count": 2,
+      "related_sources": [
+        {
+          "title": "AI Act transparency obligations guidance",
+          "source": "European Commission AI Office",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+          "is_official": false,
+          "legal_status": null
+        }
+      ]
+    },
+    {
+      "match_score": 36,
+      "matched_topics": [
+        "GDPR_GENERAL"
+      ],
+      "title": "EDPB data breach notification guidance",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_DATA_BREACH",
+        "GDPR_GENERAL"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Low",
+      "priority_score": 38,
+      "priority_reasons": [
+        "Company-profile relevance: 36/100",
+        "Source pipeline marked the item as high priority",
+        "Non-binding early-warning source"
+      ],
+      "declared_priority": "High",
+      "summary": "EDPB guidance explains personal data breach notification obligations under the GDPR.",
+      "source": "EDPB Guidelines and Recommendations",
+      "retrieved_at": null,
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": false,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en",
+      "duplicate_count": 1,
+      "related_sources": []
+    },
+    {
+      "match_score": 36,
+      "matched_topics": [
+        "GDPR_GENERAL"
+      ],
+      "title": "EDPB DPIA guidance",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_DPIA",
+        "GDPR_GENERAL"
+      ],
+      "status": "B_OFFICIAL_DRAFT",
+      "priority": "Low",
+      "priority_score": 38,
+      "priority_reasons": [
+        "Company-profile relevance: 36/100",
+        "Source pipeline marked the item as high priority",
+        "Non-binding early-warning source"
+      ],
+      "declared_priority": "High",
+      "summary": "DPIA guidance helps identify processing likely to result in high risk under GDPR Article 35.",
+      "source": "EDPB Guidelines and Recommendations",
+      "retrieved_at": null,
+      "recommended_attention": "Action recommended",
+      "source_category": "official_update",
+      "source_type": null,
+      "authority_level": null,
+      "is_official": false,
+      "legal_status": null,
+      "effective_date": null,
+      "compliance_deadline": null,
+      "url": "https://ec.europa.eu/newsroom/article29/items/611236/en",
+      "duplicate_count": 1,
+      "related_sources": []
+    }
+  ],
+  "matched_early_warnings": [],
+  "compliance_timeline": [
+    {
+      "date": "2025-02-02",
+      "title": "Prohibited-practice and AI-literacy provisions apply",
+      "translation_key": "timeline_literacy",
+      "status": "Applicable",
+      "status_code": "timeline_status_applicable",
+      "days_remaining": -518,
+      "legal_reference": "AI Act Article 4 and Article 5",
+      "basis": "applicable_law",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "General AI Act rules and Article 50 transparency obligations apply",
+      "translation_key": "timeline_general",
+      "status": "Upcoming",
+      "status_code": "timeline_status_upcoming",
+      "days_remaining": 28,
+      "legal_reference": "AI Act Article 113 and Article 50",
+      "basis": "applicable_law",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    }
+  ],
+  "match_query_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant"
+  ],
+  "match_query_topic_labels": [
+    "AI_ACT_GENERAL",
+    "GDPR_GENERAL"
+  ],
+  "next_matching_targets": [
+    "module_web_scraping regulatory events",
+    "source evidence records",
+    "risk scoring rules",
+    "dashboard output contract"
+  ]
+}

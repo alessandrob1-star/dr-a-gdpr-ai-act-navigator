@@ -1,0 +1,68 @@
+# Dependabot keeps dependencies patched automatically.
+#
+# Two kinds of PRs are produced:
+#   * Security updates  - opened immediately when a known CVE affects a pinned
+#                         dependency, regardless of the schedule below.
+#   * Version updates   - opened on the schedule below to keep pins current.
+#
+# Coverage spans every place a version is declared: Python requirements,
+# the GitHub Actions used in CI, and the Docker base images.
+version: 2
+
+updates:
+  # --- Python runtime dependencies -----------------------------------------
+  # Only directories with real (non-placeholder) requirements are listed.
+  # Add more entries here as the empty package requirements files gain deps.
+  - package-ecosystem: "pip"
+    directories:
+      - "/module_company_profile"
+      - "/module_web_scraping/packages/regulatory_data_storage"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      # Batch routine version bumps into one PR to reduce review churn.
+      # Security fixes are still delivered as their own dedicated PRs.
+      python-dependencies:
+        applies-to: version-updates
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+      - "python"
+
+  # --- GitHub Actions used by the workflows --------------------------------
+  # Keeps actions/checkout, setup-python, upload-artifact, etc. current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+  # --- Docker base images --------------------------------------------------
+  # Tracks every Dockerfile directory so pinned Python slim bases remain
+  # patched even when individual services use different Python minor versions.
+  - package-ecosystem: "docker"
+    directories:
+      - "/module_company_profile"
+      - "/module_web_scraping"
+      - "/module_web_scraping/packages/*"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      docker-base-images:
+        applies-to: version-updates
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+      - "docker"

@@ -1,0 +1,1010 @@
+Official Documents and Source Notes
+
+This folder contains the initial official legal documents collected for the MVP.
+
+1. GDPR official text
+
+File:
+CELEX_32016R0679_EN_TXT.pdf
+
+Plain English description:
+The official full text of the General Data Protection Regulation. This is the main EU law governing personal data protection.
+
+Source:
+EUR-Lex
+
+Type:
+Official law
+
+Regulation:
+Regulation (EU) 2016/679, General Data Protection Regulation
+
+Use in the project:
+Core legal document for the GDPR knowledge base, RAG retrieval, citations, and company-specific compliance analysis.
+
+2. EU AI Act official text
+
+File:
+OJ_L_202401689_EN_TXT.pdf
+
+Plain English description:
+The official full text of the EU Artificial Intelligence Act as published in the Official Journal of the European Union.
+
+Source:
+Official Journal of the European Union / EUR-Lex
+
+Type:
+Official law
+
+Regulation:
+Regulation (EU) 2024/1689, Artificial Intelligence Act
+
+Stable EUR-Lex / ELI link:
+https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+
+ELI:
+http://data.europa.eu/eli/reg/2024/1689/oj
+
+CELEX:
+32024R1689
+
+Publication date:
+12 July 2024
+
+Legal status:
+In force
+
+Use in the project:
+Core legal document for the EU AI Act knowledge base, RAG retrieval, citations, timeline analysis, and risk scoring.
+
+3. Official Journal access point
+
+URL:
+https://eur-lex.europa.eu/oj/direct-access.html
+
+Plain English description:
+Official access point for the Official Journal of the European Union, where EU legal acts are officially published.
+
+Source:
+EUR-Lex
+
+Type:
+Official publication source
+
+Use in the project:
+Official verification source for checking whether a legal act has been published in the Official Journal of the European Union.
+
+Important note:
+EUR-Lex states that, since July 2013, only the electronic edition of the Official Journal published on EUR-Lex is authentic and produces legal effects.
+
+MVP relevance:
+This source supports the Regulatory Validation Agent. News items can create early warnings, but official confirmation should rely on publication in official sources such as the Official Journal on EUR-Lex.
+
+4. EUR-Lex Webservice
+
+URL:
+https://eur-lex.europa.eu/content/help/data-reuse/webservice.html
+
+Registration URL:
+https://eur-lex.europa.eu/protected/web-service-registration.html
+
+Plain English description:
+Official EUR-Lex API-like webservice for querying EU legal documents and metadata directly. It is SOAP-based and requires registration.
+
+Source:
+EUR-Lex / Publications Office of the European Union
+
+Type:
+Official API / webservice
+
+Protocol:
+SOAP
+
+Output format:
+XML
+
+Access:
+Free after registration
+
+Current project status:
+Registration submitted. Access is currently pending administrator approval.
+
+Important notes:
+EUR-Lex states that registered users can query EUR-Lex directly through the webservice without manually searching the website. The webservice supports query options similar to expert search, including full-text search. It cannot be used to directly download document files.
+
+Use in the project:
+Preferred official API for the Official Source Verification Agent. It can be used to check whether EU legal acts, metadata, CELEX identifiers, or regulatory updates appear in EUR-Lex.
+
+MVP fallback while access is pending:
+Use stable links, ELI links, Official Journal direct access, and manually collected official documents.
+
+5. EUR-Lex permanent / stable links
+
+URL:
+https://eur-lex.europa.eu/content/help/data-reuse/linking.html
+
+Plain English description:
+Official guidance explaining how to create permanent links to EUR-Lex documents, Official Journal editions, and pages.
+
+Source:
+EUR-Lex / Publications Office of the European Union
+
+Type:
+Stable links / data reuse guidance
+
+Access:
+No login required
+
+Important notes:
+EUR-Lex defines a permanent link, also known as a stable link, as a link that will not change over time and guarantees ongoing access to the linked content. Permanent links can point to website pages in a specific language, specific Official Journal editions, or specific documents using identifiers.
+
+Use in the project:
+Official fallback for stable references to GDPR, the EU AI Act, Official Journal publications, and cited documents when API access is pending or not required.
+
+6. EUR-Lex RSS alerts
+
+URL:
+https://eur-lex.europa.eu/content/help/my-eurlex/my-rss-feeds.html
+
+Plain English description:
+Official EUR-Lex feature for creating RSS alerts from saved searches, documents, or procedures.
+
+Source:
+EUR-Lex
+
+Type:
+RSS alerts / monitoring
+
+Access:
+Requires registered EUR-Lex user and sign-in
+
+Use in the project:
+Potential monitoring mechanism for updates related to saved documents, procedures, or searches.
+
+Current project status:
+Available as an option, but login-dependent and secondary to the Webservice and stable links.
+
+7. European AI Office
+
+URL:
+https://digital-strategy.ec.europa.eu/en/policies/ai-office
+
+Plain English description:
+Official European Commission page for the European AI Office, the body supporting implementation and enforcement of the AI Act, especially for general-purpose AI.
+
+Source:
+European Commission
+
+Type:
+Official institutional / implementation monitoring page
+
+Regulation:
+EU AI Act
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Official monitoring source for AI Act implementation, general-purpose AI updates, guidance, guidelines, implementing acts, delegated acts, compliance monitoring, AI Office news, and governance developments.
+
+Important notes:
+The European AI Office supports implementation of the AI Act, especially for general-purpose AI. It prepares guidance and guidelines, supports compliance monitoring, and contributes to AI governance across Member States.
+
+8. Digital Omnibus - AI Regulation Proposal
+
+URL:
+https://digital-strategy.ec.europa.eu/en/library/digital-omnibus-ai-regulation-proposal
+
+Plain English description:
+Official European Commission proposal for targeted amendments to AI regulation as part of the Digital Simplification Package.
+
+Source:
+European Commission
+
+Type:
+Official proposal / proposed regulatory change
+
+Regulation:
+EU AI Act
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Example of an official proposed regulatory change. Useful for demonstrating that the platform can track not only laws already in force, but also official proposals and amendments that may affect future compliance duties.
+
+Validation relevance:
+This type of source should be treated as an official draft or proposal, not as a final published legal obligation.
+
+9. EU agreement to simplify AI rules
+
+URL:
+https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens
+
+Plain English description:
+Official European Commission news item about a political agreement to simplify AI rules and update parts of the AI regulatory framework.
+
+Source:
+European Commission
+
+Type:
+Official news / political agreement
+
+Regulation:
+EU AI Act
+
+Date:
+7 May 2026
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Official source for validating news about a political agreement or upcoming changes to AI rules. Useful for the validation chain between regulatory news, official proposals, and final legal publication.
+
+10. EDPB Guidelines, Recommendations, Best Practices
+
+URL:
+https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en
+
+Plain English description:
+Official EDPB page listing GDPR guidelines, recommendations, and best practices used to interpret and clarify EU data protection law.
+
+Source:
+European Data Protection Board
+
+Type:
+Official guidance / GDPR interpretation / monitoring page
+
+Regulation:
+GDPR
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Official GDPR guidance source for the regulatory knowledge base, monitoring GDPR-related updates, and validating news about GDPR interpretation or best practices.
+
+Important notes:
+The EDPB issues general guidance, including guidelines, recommendations, and best practices, to clarify the law and promote common understanding of EU data protection laws.
+
+11. Guidelines on automated individual decision-making and profiling
+
+URL:
+https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/automated-decision-making-and-profiling_en
+
+Plain English description:
+Official GDPR guidance on automated decisions and profiling, relevant for AI systems that evaluate, rank, score, or make decisions about people.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Automated decision-making and profiling
+
+Date:
+25 May 2018
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GDPR knowledge base, profiling risk detection, automated decision-making risk detection, company questionnaire mapping, risk scoring, and assistant citations. Highly relevant for AI systems that evaluate people, such as recruitment, credit scoring, ranking, recommendation, and eligibility tools.
+
+12. Guidelines on Data Protection Impact Assessment (DPIA)
+
+URL:
+https://ec.europa.eu/newsroom/article29/items/611236/en
+
+PDF:
+https://ec.europa.eu/newsroom/just/document.cfm?doc_id=47711
+
+Plain English description:
+Official guidance explaining when a Data Protection Impact Assessment may be required for high-risk personal data processing.
+
+Source:
+Article 29 Working Party / European Commission archive
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+DPIA / high-risk processing
+
+Date:
+13 October 2017
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GDPR risk assessment, DPIA flag in the company questionnaire, risk scoring, compliance recommendations, and assistant citations.
+
+13. Guidelines 9/2022 on personal data breach notification under GDPR
+
+Plain English description:
+Official GDPR guidance on how organisations should assess, handle, and notify personal data breaches.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Personal data breach notification / cybersecurity
+
+Date:
+4 April 2023
+
+Version:
+2.0 final
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GDPR breach risk flag, incident response obligations, cybersecurity-related compliance recommendations, dashboard risk scoring, and assistant citations.
+
+14. Guidelines 1/2024 on legitimate interest
+
+File:
+edpb_guidelines_202401_legitimateinterest_en.pdf
+
+Plain English description:
+Official EDPB guidance on using legitimate interest as a GDPR legal basis for processing personal data.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Legitimate interest / legal basis
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Company questionnaire, GDPR legal basis detection, risk scoring, compliance recommendations, and assistant citations.
+
+15. Guidelines 4/2019 on Article 25 Data Protection by Design and by Default
+
+File:
+edpb_guidelines_201904_dataprotection_by_design_and_by_default_v2.0_en.pdf
+
+Plain English description:
+Official EDPB guidance on building privacy and data protection safeguards into products and services from the design stage.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Data protection by design and by default
+
+Version:
+2.0
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Product design risk assessment, GDPR recommendations, risk scoring, compliance action suggestions, and assistant citations.
+
+16. Summary - Data Protection by Design and by Default
+
+File:
+edpb-summary-gdpr-data-protection-design-default_en.pdf
+
+Plain English description:
+Short EDPB summary of data protection by design and by default, useful for practical and founder-friendly explanations.
+
+Source:
+European Data Protection Board
+
+Type:
+Official summary / practical guidance
+
+Regulation:
+GDPR
+
+Topic:
+Data protection by design and by default
+
+Priority:
+Medium-High
+
+Status:
+Collected
+
+Use in the project:
+Practical support for translating GDPR design obligations into founder-friendly recommendations and dashboard actions.
+
+17. Guidelines 07/2020 on controller and processor concepts
+
+File:
+EDPB_guidelines_202007_controllerprocessor_final_en.pdf
+
+Plain English description:
+Official EDPB guidance explaining GDPR roles such as controller, processor, and joint controller.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Controller / processor / joint controller
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Company profiling, GDPR role classification, questionnaire logic, compliance obligations mapping, risk scoring, and assistant citations.
+
+18. Guidelines 01/2022 on data subject rights - Right of access
+
+File:
+edpb_guidelines_202201_data_subject_rights_access_v2_en.pdf
+
+Plain English description:
+Official EDPB guidance on the GDPR right of access, explaining how individuals can request access to their personal data.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR guidance
+
+Regulation:
+GDPR
+
+Topic:
+Data subject rights / right of access
+
+Version:
+2.0
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GDPR obligations mapping, company questionnaire, compliance checklist, risk scoring, and assistant citations.
+
+19. Recommendations 01/2020 on supplementary measures for international transfers
+
+File:
+edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf
+
+Plain English description:
+Official EDPB recommendations on safeguards and supplementary measures for transferring personal data outside the EU/EEA.
+
+Source:
+European Data Protection Board
+
+Type:
+Official GDPR recommendation
+
+Regulation:
+GDPR
+
+Topic:
+International data transfers / supplementary measures
+
+Version:
+2.0
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Company questionnaire, third-party provider risk, cloud and LLM provider assessment, GDPR transfer risk flag, compliance recommendations, and assistant citations.
+
+20. One-Stop-Shop Case Digest on Security and Data Breach
+
+File:
+one_stop_shop_case_digest_security_data_breach_en.pdf
+
+Plain English description:
+EDPB case digest collecting practical enforcement examples related to security measures and personal data breaches.
+
+Source:
+European Data Protection Board
+
+Type:
+Case digest / practical enforcement reference
+
+Regulation:
+GDPR
+
+Topic:
+Security of processing / data breach / enforcement cases
+
+Priority:
+Medium-High
+
+Status:
+Collected
+
+Use in the project:
+Practical examples, enforcement-oriented explanations, risk scoring calibration, dashboard recommendations, and assistant supporting context.
+
+21. Commission document on prohibited AI practices
+
+File:
+C_2025_884_2_EN_ACT_part1_v2_prohibited_ai_practices.pdf
+
+Plain English description:
+Official Commission document connected to guidance on prohibited AI practices under the EU AI Act.
+
+Source:
+European Commission
+
+Type:
+Official Commission document
+
+Regulation:
+EU AI Act
+
+Topic:
+Prohibited AI practices / Article 5
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+AI Act prohibited practices detection, company questionnaire, critical risk scoring, dashboard alerts, and assistant citations.
+
+22. Guidelines on prohibited artificial intelligence practices
+
+File:
+Guidelines_on_prohibited_artificial_intelligence_practices_AI_Act.pdf
+
+Plain English description:
+Official European Commission guidance explaining prohibited AI practices established by Regulation (EU) 2024/1689.
+
+Source:
+European Commission
+
+Type:
+Official AI Act guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+Prohibited AI practices / Article 5
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+AI Act prohibited practices detection, company questionnaire, critical risk scoring, dashboard alerts, and assistant citations.
+
+23. Commission Guidelines on the definition of an artificial intelligence system
+
+File:
+commission_guidelines_ai_system_definition_AI_Act.pdf
+
+Plain English description:
+Official European Commission guidance explaining how to determine whether a product or system qualifies as an AI system under the AI Act.
+
+Source:
+European Commission
+
+Type:
+Official AI Act guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+Definition of AI system
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+Company questionnaire, AI Act scope assessment, initial classification logic, risk scoring, and assistant citations.
+
+24. EU AI Act Official Journal extract / structured PDF
+
+File:
+L_202401689EN.000101.fmx.xml.pdf
+
+Plain English description:
+Structured or extracted Official Journal version of the EU AI Act text, useful as an alternate official format for the regulation.
+
+Source:
+EUR-Lex / Official Journal of the European Union
+
+Type:
+Official law / structured Official Journal document
+
+Regulation:
+EU AI Act
+
+Topic:
+Full AI Act text, including high-risk provisions and annexes
+
+Priority:
+Medium
+
+Status:
+Collected
+
+Use in the project:
+Alternate official source format for the AI Act text, Annex III references, and high-risk provisions.
+
+25. Draft Guidelines on high-risk AI classification - General principles
+
+File:
+Draft_Guidelines_high_risk_AI_general_principles.pdf
+
+Plain English description:
+Official draft guidance on the general principles for classifying high-risk AI systems under the AI Act.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official draft guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+High-risk AI classification / general principles
+
+Priority:
+High
+
+Status:
+Draft collected
+
+Validation relevance:
+Treat as official draft guidance, not as final binding guidance.
+
+Use in the project:
+High-risk classification support, questionnaire design, draft-stage validation status, risk scoring, and assistant context.
+
+26. Draft Guidelines on high-risk AI classification - Annex I
+
+File:
+Draft_Guidelines_high_risk_AI_Annex_I.pdf
+
+Plain English description:
+Official draft guidance related to high-risk AI classification under Annex I of the AI Act.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official draft guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+High-risk AI classification / Annex I
+
+Priority:
+High
+
+Status:
+Draft collected
+
+Validation relevance:
+Treat as official draft guidance, not as final binding guidance.
+
+Use in the project:
+High-risk classification support, questionnaire design, draft-stage validation status, risk scoring, and assistant context.
+
+27. Draft Guidelines on high-risk AI classification - Annex III
+
+File:
+Draft_Guidelines_high_risk_AI_Annex_III.pdf
+
+Plain English description:
+Official draft guidance related to Annex III high-risk AI use cases, such as employment, education, credit, law enforcement, migration, justice, and democratic processes.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official draft guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+High-risk AI classification / Annex III
+
+Priority:
+High
+
+Status:
+Draft collected
+
+Validation relevance:
+Treat as official draft guidance, not as final binding guidance.
+
+Use in the project:
+High-risk classification support, questionnaire design, draft-stage validation status, risk scoring, and assistant context.
+
+28. Code of Practice for General-Purpose AI Models - Safety and Security Chapter
+
+File:
+Code_of_Practice_GPAI_Safety_and_Security_Chapter.pdf
+
+Plain English description:
+Official code of practice chapter on safety and security expectations for general-purpose AI models.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official code of practice / implementation guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+General-purpose AI models / safety and security
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GPAI risk detection, questionnaire questions about model provider or model use, safety/security obligations, risk scoring, and assistant citations.
+
+29. Code of Practice for General-Purpose AI Models - Copyright Chapter
+
+File:
+Code_of_Practice_GPAI_Copyright_Chapter.pdf
+
+Plain English description:
+Official code of practice chapter on copyright-related expectations for general-purpose AI models.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official code of practice / implementation guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+General-purpose AI models / copyright
+
+Priority:
+Medium-High
+
+Status:
+Collected
+
+Use in the project:
+GPAI risk detection, copyright and training data concerns, model provider assessment, compliance recommendations, and assistant citations.
+
+30. Code of Practice for General-Purpose AI Models - Transparency Chapter
+
+File:
+Code_of_Practice_GPAI_Transparency_Chapter.pdf
+
+Plain English description:
+Official code of practice chapter on transparency expectations for general-purpose AI models.
+
+Source:
+European Commission / AI Office
+
+Type:
+Official code of practice / implementation guidance
+
+Regulation:
+EU AI Act
+
+Topic:
+General-purpose AI models / transparency
+
+Priority:
+High
+
+Status:
+Collected
+
+Use in the project:
+GPAI risk detection, transparency obligations, questionnaire logic, model provider assessment, compliance recommendations, and assistant citations.
+
+31. IAPP News / AI Governance
+
+URL:
+https://iapp.org/news/
+
+Related AI governance page:
+https://iapp.org/resources/topics/ai-governance/
+
+Plain English description:
+Trusted professional news and resource source for privacy, AI governance, GDPR, EU AI Act, cybersecurity law, and digital responsibility.
+
+Source:
+International Association of Privacy Professionals (IAPP)
+
+Type:
+Trusted regulatory news / professional resource
+
+Regulation:
+GDPR, EU AI Act, AI governance
+
+Priority:
+High for news and warning layer
+
+Status:
+Collected candidate
+
+Official status:
+Not an official EU legal source.
+
+Use in the project:
+News Monitoring Agent source. IAPP items may create early warnings, but they must be validated against official sources such as EUR-Lex, the European Commission, the AI Office, or the EDPB before becoming official alerts.
+
+32. Euractiv Tech
+
+URL:
+https://www.euractiv.com/section/tech/
+
+Plain English description:
+EU policy news source covering technology, artificial intelligence, data privacy, cybersecurity, cloud sovereignty, platforms, and digital policy.
+
+Source:
+Euractiv
+
+Type:
+Trusted EU policy news source / monitored webpage
+
+Regulation:
+EU AI Act, GDPR, EU digital policy
+
+Priority:
+Medium-High for news and warning layer
+
+Status:
+Collected candidate
+
+Official status:
+Not an official EU legal source.
+
+Use in the project:
+News Monitoring Agent source for EU tech and AI policy developments. Euractiv items may create early warnings and should be validated against official EU sources before they are treated as confirmed regulatory updates.
+
+33. Future of Privacy Forum - Center for Artificial Intelligence
+
+URL:
+https://fpf.org/fpf-ai/
+
+Plain English description:
+Policy analysis source focused on AI governance, privacy, emerging AI law, and practical policy interpretation.
+
+Source:
+Future of Privacy Forum
+
+Type:
+Trusted policy analysis / AI governance news
+
+Regulation:
+AI governance, privacy law, emerging AI regulation
+
+Priority:
+Medium for news and warning layer
+
+Status:
+Collected candidate
+
+Official status:
+Not an official EU legal source.
+
+Use in the project:
+News Monitoring Agent source for AI governance and privacy policy signals. It is useful for early warnings and broader context, but EU-related claims must be validated against official EU sources.
+
+34. European Law Blog - Artificial Intelligence section
+
+URL:
+https://europeanlawblog.eu/category/artificial-intelligence/
+
+Plain English description:
+European legal analysis source covering AI Act, GDPR, automated decision-making, CJEU case law, AI enforcement, and digital regulation.
+
+Source:
+European Law Blog
+
+Type:
+Legal analysis / expert commentary
+
+Regulation:
+EU AI Act, GDPR, EU digital law
+
+Priority:
+Medium for analysis and warning layer
+
+Status:
+Collected candidate
+
+Official status:
+Not an official EU legal source.
+
+Use in the project:
+Analysis monitoring source. It may generate legal interpretation signals or warnings, but it should not create official alerts without validation against official legal sources.

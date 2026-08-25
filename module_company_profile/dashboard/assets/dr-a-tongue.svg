@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Dr. A con linguaccia">
+  <rect width="240" height="240" rx="34" fill="#ffcc00"/>
+  <circle cx="120" cy="108" r="62" fill="#ffe1bd"/>
+  <path d="M51 97c15-48 39-55 54-37 12-38 50-37 57 0 24-7 43 17 30 44 24 15 7 48-19 38-3 39-46 52-68 25-26 20-66-4-55-40-28-3-35-29 1-30z" fill="#f7f7f7"/>
+  <circle cx="96" cy="108" r="7" fill="#16213d"/>
+  <path d="M136 103c9 10 23 10 32 0" fill="none" stroke="#16213d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M99 136c11 8 31 8 42 0" fill="none" stroke="#16213d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M115 138c0 18 7 28 18 28s18-10 18-28" fill="#ff6b8a" stroke="#16213d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M133 144v18" stroke="#e73764" stroke-width="4" stroke-linecap="round"/>
+  <path d="M66 89c20 16 55 17 78 0" fill="none" stroke="#16213d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M74 193c8-36 29-51 46-51s39 15 46 51" fill="#ffffff"/>
+  <path d="M98 151l22 32 22-32" fill="#d8e3ff"/>
+  <path d="M52 190c30 19 107 19 136 0" fill="none" stroke="#001f68" stroke-width="8" stroke-linecap="round"/>
+  <path d="M42 67l12 8M38 93l14-1M51 42l9 14" stroke="#001f68" stroke-width="6" stroke-linecap="round"/>
+</svg>

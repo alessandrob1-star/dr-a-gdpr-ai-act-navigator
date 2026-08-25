@@ -1,0 +1,18 @@
+# Code owners are automatically requested for review on matching pull requests.
+# The last matching pattern takes precedence.
+#
+# Requiring a code-owner review is enforced only if you enable
+# "Require review from Code Owners" in the branch protection rules for `main`.
+#
+# Replace @alessandrob1-star with a team handle (e.g. @org/maintainers) if this
+# repository moves under a GitHub organization.
+
+# Default owner for everything in the repository.
+*                       @alessandrob1-star
+
+# Security-sensitive configuration should always be reviewed by the owner.
+/.github/               @alessandrob1-star
+/.github/workflows/     @alessandrob1-star
+/.gitleaks.toml         @alessandrob1-star
+/.pre-commit-config.yaml @alessandrob1-star
+/pyproject.toml         @alessandrob1-star

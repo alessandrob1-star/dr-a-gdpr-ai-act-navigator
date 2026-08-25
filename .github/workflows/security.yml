@@ -1,0 +1,72 @@
+name: Security
+
+# Secure-by-design gate. These jobs fail the build (fail-closed) when a known
+# vulnerability or a leaked secret is detected, so insecure changes cannot be
+# merged silently.
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  # Re-run on a schedule so newly disclosed CVEs are caught even without a push.
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-audit:
+    name: Dependency CVE audit (pip-audit)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install pip-audit
+        # Pinned for reproducibility; the vulnerability database itself is
+        # fetched fresh at run time, so advisories stay current regardless.
+        run: python -m pip install pip-audit==2.7.3
+
+      - name: Audit Python dependencies
+        # --strict: warnings (e.g. an unfixable advisory) also fail the build.
+        # Every real requirements file is scanned. Empty placeholder manifests
+        # are skipped because they declare no dependencies.
+        run: |
+          set -euo pipefail
+          pip-audit --strict --progress-spinner=off \
+            -r module_company_profile/requirements.txt \
+            -r module_web_scraping/packages/regulatory_data_storage/requirements.txt
+
+  secret-scan:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    # gitleaks-action reads the PR's commit list on pull_request events, which
+    # requires pull-requests: read. Scoped to this job to keep least privilege.
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Full history so secrets introduced in any past commit are detected,
+          # not just the current tree.
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          # gitleaks-action is free for personal accounts and public repos.
+          # If this repo is later moved under a GitHub organization, add a
+          # GITLEAKS_LICENSE secret here.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml

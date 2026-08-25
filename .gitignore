@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+config/eurlex_credentials.json
+
+# Local data and generated artifacts
+data/raw/
+data/processed/
+storage/*
+!storage/web_scraping_outputs/
+storage/web_scraping_outputs/*
+!storage/web_scraping_outputs/regulatory_events.json
+!storage/web_scraping_outputs/articles_and_news_feed.json
+!storage/web_scraping_outputs/live_articles_and_news_feed.json
+outputs/
+tmp/
+.docker-temp/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store

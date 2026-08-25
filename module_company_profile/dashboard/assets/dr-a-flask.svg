@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Dr. A con ampolla">
+  <rect width="240" height="240" rx="34" fill="#ffcc00"/>
+  <circle cx="120" cy="106" r="62" fill="#ffe1bd"/>
+  <path d="M52 92c18-46 38-50 52-34 13-35 45-34 52-2 27-11 47 16 33 45 25 11 14 48-14 41-2 38-45 52-66 24-25 22-67 2-58-36-28-2-35-32 1-38z" fill="#f7f7f7"/>
+  <circle cx="96" cy="106" r="7" fill="#16213d"/>
+  <circle cx="142" cy="106" r="7" fill="#16213d"/>
+  <path d="M101 136c10 10 28 10 38 0" fill="none" stroke="#16213d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M70 89c18 16 50 17 70 1" fill="none" stroke="#16213d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M88 77c14 14 51 14 65 0" fill="none" stroke="#16213d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M73 193c7-36 30-51 47-51s40 15 47 51" fill="#ffffff"/>
+  <path d="M99 150l21 32 21-32" fill="#d8e3ff"/>
+  <path d="M54 190c29 19 105 19 132 0" fill="none" stroke="#001f68" stroke-width="8" stroke-linecap="round"/>
+  <path d="M169 139l31 45" stroke="#ffe1bd" stroke-width="15" stroke-linecap="round"/>
+  <path d="M187 101h28v28c0 18-14 32-32 32h-8c-18 0-32-14-32-32v-28h28" fill="#73e7ff" stroke="#001f68" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M152 127h54" stroke="#001f68" stroke-width="5"/>
+  <circle cx="170" cy="140" r="5" fill="#00a3c7"/>
+  <circle cx="194" cy="138" r="4" fill="#00a3c7"/>
+</svg>

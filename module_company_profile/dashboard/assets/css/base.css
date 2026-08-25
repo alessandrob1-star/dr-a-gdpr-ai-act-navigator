@@ -1,0 +1,62 @@
+/* Design system: Bootstrap-friendly tokens for a modern compliance workspace. */
+:root {
+  --eu-blue: #003399;
+  --eu-blue-deep: #061b49;
+  --eu-yellow: #ffcc00;
+  --bg: #edf6ff;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --panel: rgba(255, 255, 255, 0.94);
+  --panel-strong: #ffffff;
+  --ink: #102033;
+  --muted: #5d6b82;
+  --line: #dbe4f0;
+  --accent: #0d6efd;
+  --accent-ink: #ffffff;
+  --field: #ffffff;
+  --field-ink: #102033;
+  --green: #137a4d;
+  --amber: #a16207;
+  --red: #b42318;
+  --blue-soft: #eef5ff;
+  --green-soft: #dcfce7;
+  --amber-soft: #fff7d6;
+  --red-soft: #ffe4e0;
+  --shadow: 0 18px 48px rgba(15, 35, 68, 0.12);
+  --shadow-soft: 0 10px 24px rgba(15, 35, 68, 0.08);
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(248, 252, 255, 0.82), rgba(237, 246, 255, 0.98)),
+    radial-gradient(circle at 8% 12%, rgba(255, 204, 0, 0.16), transparent 280px),
+    var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #084298;
+}
+
+::selection {
+  background: rgba(255, 204, 0, 0.42);
+}

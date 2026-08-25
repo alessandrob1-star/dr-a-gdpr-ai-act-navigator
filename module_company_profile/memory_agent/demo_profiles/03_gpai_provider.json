@@ -1,0 +1,25 @@
+{
+  "questionnaire": "company_gdpr_ai_act_initial_assessment",
+  "version": "1.0",
+  "completed_at": "2026-06-25T10:10:00.000Z",
+  "answers": {
+    "company_name": "NovaModel Labs",
+    "contact_email": "compliance@novamodel.example",
+    "industry": "software_saas",
+    "company_size": "medium",
+    "eu_presence": ["eu_market", "eu_customers"],
+    "ai_usage": ["ai_provider", "gpai"],
+    "ai_functions": ["content_generation", "recommendations"],
+    "ai_notice": "clear",
+    "sensitive_domains": ["none"],
+    "delicate_ai_practices": ["none"],
+    "personal_data": ["customers_users", "tracking_analytics"],
+    "profiling_decisions": ["personalized_recommendations"],
+    "privacy_role": "processor",
+    "extra_eea_transfers": "yes",
+    "extra_eea_providers": ["cloud_hosting", "ai_api_models"],
+    "controls": ["privacy_policy", "records_processing", "vendor_review", "ai_documentation"],
+    "dashboard_priority": "external_evidence",
+    "notes": "GPAI/foundation-model provider selling into the EU market."
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  web-scraping:
+    build:
+      context: ..
+      dockerfile: module_web_scraping/Dockerfile
+    image: ai-regulatory-web-scraping:local
+    volumes:
+      - ../storage:/app/storage
+    command: seed-dashboard

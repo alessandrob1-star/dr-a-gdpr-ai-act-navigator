@@ -1,0 +1,16 @@
+name: source_monitoring
+status: draft
+owner_area: web_scraping
+runtime: python:3.12-slim
+purpose: Collect candidate regulatory signals from curated official and trusted sources.
+default_command: python smoke.py
+inputs:
+  - data/source-registry-seed.csv
+  - static HTML fixture from module_web_scraping.demo_monitor_static
+outputs:
+  - monitored item records
+  - source metadata summary
+next_steps:
+  - Add scheduled source fetch jobs.
+  - Persist monitoring run metadata.
+  - Split source adapters by access method.

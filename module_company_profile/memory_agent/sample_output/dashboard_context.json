@@ -1,0 +1,69 @@
+{
+  "company_name": "Acme HR AI",
+  "relevance_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "high_risk_ai_candidate",
+    "dpia_candidate",
+    "international_transfer_review",
+    "transparency_gap"
+  ],
+  "dashboard_cards": [
+    {
+      "tag": "gdpr_relevant",
+      "title": "GDPR relevance likely",
+      "summary": "The company likely needs a GDPR relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "ai_act_relevant",
+      "title": "AI Act relevance likely",
+      "summary": "The company likely needs an AI Act relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "high_risk_ai_candidate",
+      "title": "High-risk AI candidate",
+      "summary": "One or more AI use cases may fall into high-risk AI areas.",
+      "priority": "high"
+    },
+    {
+      "tag": "dpia_candidate",
+      "title": "DPIA candidate",
+      "summary": "The company may need a DPIA or similar impact assessment.",
+      "priority": "medium"
+    },
+    {
+      "tag": "international_transfer_review",
+      "title": "International transfer review",
+      "summary": "Cloud, AI providers, or data transfers outside the EU/EEA should be reviewed.",
+      "priority": "low"
+    },
+    {
+      "tag": "transparency_gap",
+      "title": "AI transparency gap",
+      "summary": "The company may need clearer user-facing AI notices.",
+      "priority": "low"
+    },
+    {
+      "tag": "missing_controls",
+      "title": "Controls to verify",
+      "summary": "Missing or unclear controls: AI system documentation, Internal AI policy, DPIA process, Human oversight, Records of processing, Vendor review",
+      "priority": "medium"
+    }
+  ],
+  "match_query_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "high_risk_ai_candidate",
+    "dpia_candidate",
+    "international_transfer_review",
+    "transparency_gap"
+  ],
+  "next_matching_targets": [
+    "module_web_scraping regulatory events",
+    "source evidence records",
+    "risk scoring rules",
+    "dashboard output contract"
+  ]
+}

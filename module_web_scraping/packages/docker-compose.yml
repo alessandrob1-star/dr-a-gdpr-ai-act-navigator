@@ -1,0 +1,32 @@
+services:
+  source-monitoring:
+    build:
+      context: ../..
+      dockerfile: module_web_scraping/packages/source_monitoring/Dockerfile
+    image: ai-regulatory-source-monitoring:local
+
+  eurlex-connector:
+    build:
+      context: ../..
+      dockerfile: module_web_scraping/packages/eurlex_connector/Dockerfile
+    image: ai-regulatory-eurlex-connector:local
+
+  validation-engine:
+    build:
+      context: ../..
+      dockerfile: module_web_scraping/packages/validation_engine/Dockerfile
+    image: ai-regulatory-validation-engine:local
+
+  scoring-engine:
+    build:
+      context: ../..
+      dockerfile: module_web_scraping/packages/scoring_engine/Dockerfile
+    image: ai-regulatory-scoring-engine:local
+
+  regulatory-data-storage:
+    build:
+      context: ../..
+      dockerfile: module_web_scraping/packages/regulatory_data_storage/Dockerfile
+    image: ai-regulatory-data-storage:local
+    volumes:
+      - ../../storage:/app/storage

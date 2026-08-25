@@ -1,0 +1,21 @@
+# gitleaks configuration for the AI Act Compliance Navigator.
+#
+# Extends the maintained default ruleset (do NOT replace it) and adds a
+# narrowly-scoped allowlist for files that intentionally contain placeholder
+# credentials for documentation purposes.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Intentional placeholders, not real secrets"
+paths = [
+  # Example EUR-Lex credentials shipped with placeholder values
+  # (YOUR_EURLEX_USERNAME / YOUR_EURLEX_PASSWORD) so users know the schema.
+  '''config/eurlex_credentials\.example\.json''',
+]
+# Belt-and-suspenders: ignore the well-known placeholder tokens even if they
+# ever appear elsewhere (e.g. in README examples).
+regexes = [
+  '''YOUR_EURLEX_USERNAME''',
+  '''YOUR_EURLEX_PASSWORD''',
+]

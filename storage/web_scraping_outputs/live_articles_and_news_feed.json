@@ -1,0 +1,247 @@
+{
+  "mode": "live",
+  "updated_at": "2026-07-16T10:25:57.090609+00:00",
+  "sources": [
+    "European Commission Digital Strategy News",
+    "EDPB News",
+    "European Commission AI Office",
+    "IAPP News",
+    "Inside Privacy AI",
+    "Future of Privacy Forum AI"
+  ],
+  "errors": [],
+  "items": [
+    {
+      "title": "Commission publishes Code of Practice on marking and labelling AI-generated content",
+      "source": "European Commission Digital Strategy News",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content",
+      "kind": "live_monitored_item",
+      "status": "OFFICIAL_UPDATE",
+      "status_label": "Official update",
+      "source_category": "official_update",
+      "source_type": "official_news",
+      "authority_level": "official_guidance",
+      "is_official": true,
+      "legal_status": "Official source; check whether the item is binding law or guidance",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_TRANSPARENCY",
+        "AI_ACT_GPAI"
+      ],
+      "summary": "Update detected from an official source. Open the source to read the complete content.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.005131"
+    },
+    {
+      "title": "Upcoming guidelines supporting the implementation of the AI Act",
+      "source": "European Commission AI Office",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/supporting-implementation-ai-act-clear-guidelines",
+      "kind": "live_monitored_item",
+      "status": "OFFICIAL_UPDATE",
+      "status_label": "Official update",
+      "source_category": "official_update",
+      "source_type": "official_guidance",
+      "authority_level": "official_guidance",
+      "is_official": true,
+      "legal_status": "Official source; check whether the item is binding law or guidance",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Update detected from an official source. Open the source to read the complete content.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.034700"
+    },
+    {
+      "title": "The EU AI Act deadline moved, vendor questionnaires will not",
+      "source": "IAPP News",
+      "url": "https://iapp.org/news/a/the-eu-ai-act-deadline-moved-vendor-questionnaires-will-not",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "trusted_news",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:57.089594"
+    },
+    {
+      "title": "Thought for the week: Web scraping for generative AI is subject to the GDPR",
+      "source": "IAPP News",
+      "url": "https://iapp.org/news/a/thought-for-the-week-web-scraping-for-generative-ai-is-subject-to-the-gdpr",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "trusted_news",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:57.089857"
+    },
+    {
+      "title": "EU AI Act Update: The European Commission Publishes Draft Guidelines on HRAIs",
+      "source": "Inside Privacy AI",
+      "url": "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.076946"
+    },
+    {
+      "title": "EU AI Act Update: Timeline Relief, Targeted Simplification, and New Prohibitions",
+      "source": "Inside Privacy AI",
+      "url": "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.077421"
+    },
+    {
+      "title": "guidance on how to comply with the GDPR when using AI‑powered voice transcription tools",
+      "source": "Inside Privacy AI",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/transcripcion-de-voz-con-ia-ii-responsabilidad-derechos-y-transparencia",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.077865"
+    },
+    {
+      "title": "Spanish Supervisory Authority Issues Detailed Guidance on Agentic AI and GDPR Compliance",
+      "source": "Inside Privacy AI",
+      "url": "https://www.insideprivacy.com/artificial-intelligence/spanish-supervisory-authority-issues-detailed-guidance-on-agentic-ai-and-gdpr-compliance/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "GDPR",
+      "topic_labels": [
+        "GDPR_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.078085"
+    },
+    {
+      "title": "EU AI Act Resources",
+      "source": "Future of Privacy Forum AI",
+      "url": "https://fpf.org/fpf-resources-on-the-eu-ai-act/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.081077"
+    },
+    {
+      "title": "Frontier AI Goes Federal: How the Great American AI Act Compares to State Laws",
+      "source": "Future of Privacy Forum AI",
+      "url": "https://fpf.org/blog/frontier-ai-goes-federal-how-the-great-american-ai-act-compares-to-state-laws/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.081333"
+    },
+    {
+      "title": "Colorado Revises Its AI Act: What Changed and Why",
+      "source": "Future of Privacy Forum AI",
+      "url": "https://fpf.org/blog/colorado-revises-its-ai-act-what-changed-and-why/",
+      "kind": "live_monitored_item",
+      "status": "EARLY_WARNING",
+      "status_label": "Early warning - not law",
+      "source_category": "early_warning",
+      "source_type": "expert_source",
+      "authority_level": "trusted_warning",
+      "is_official": false,
+      "legal_status": "Non-binding commentary; verify against official sources",
+      "priority": "Review",
+      "regulation_area": "AI_ACT",
+      "topic_labels": [
+        "AI_ACT_GENERAL"
+      ],
+      "summary": "Early signal detected from a trusted professional source. It is not law and requires verification against official sources.",
+      "recommended_attention": "Review the impact on this company profile",
+      "retrieved_at": "2026-07-16T12:25:56.081556"
+    }
+  ]
+}

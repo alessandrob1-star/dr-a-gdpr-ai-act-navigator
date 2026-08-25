@@ -1,0 +1,155 @@
+You are an EU AI Act and GDPR compliance assistant. Use only the structured company memory and dashboard context below. Do not invent facts. Do not provide legal advice. Explain the initial relevance assessment in clear business language.
+
+Required output:
+1. Short company-specific summary
+2. Why GDPR may or may not be relevant
+3. Why AI Act may or may not be relevant
+4. Top 3 action priorities
+5. Missing information to ask the company
+
+COMPANY_MEMORY_JSON:
+{
+  "memory_version": "0.1.0",
+  "created_at": "2026-06-25T11:08:53.861769+00:00",
+  "source_questionnaire": "company_gdpr_ai_act_initial_assessment",
+  "source_completed_at": "2026-06-25T10:00:00.000Z",
+  "company_profile": {
+    "company_name": "Acme HR AI",
+    "contact_email": "privacy@acme.example",
+    "industry": "hr_recruiting",
+    "company_size": "small",
+    "eu_presence": [
+      "eu_company",
+      "eu_customers"
+    ],
+    "dashboard_priority": "main_risks"
+  },
+  "ai_profile": {
+    "ai_usage": [
+      "customer_product_ai",
+      "in_house_ai"
+    ],
+    "ai_functions": [
+      "classification",
+      "scoring",
+      "decision_support"
+    ],
+    "ai_notice": "not_prominent",
+    "sensitive_domains": [
+      "recruiting",
+      "workers"
+    ],
+    "delicate_ai_practices": [
+      "none"
+    ]
+  },
+  "privacy_profile": {
+    "personal_data": [
+      "employees_candidates",
+      "tracking_analytics"
+    ],
+    "profiling_decisions": [
+      "profiling",
+      "human_review_decision_support"
+    ],
+    "privacy_role": "controller",
+    "extra_eea_transfers": "unknown",
+    "extra_eea_providers": [
+      "ai_api_models"
+    ]
+  },
+  "controls": {
+    "existing": [
+      "privacy_policy",
+      "breach_process"
+    ],
+    "missing_or_to_verify": [
+      "AI system documentation",
+      "Internal AI policy",
+      "DPIA process",
+      "Human oversight",
+      "Records of processing",
+      "Vendor review"
+    ]
+  },
+  "relevance_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "high_risk_ai_candidate",
+    "dpia_candidate",
+    "international_transfer_review",
+    "transparency_gap"
+  ],
+  "notes": "Demo company for initial matching."
+}
+
+DASHBOARD_CONTEXT_JSON:
+{
+  "company_name": "Acme HR AI",
+  "relevance_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "high_risk_ai_candidate",
+    "dpia_candidate",
+    "international_transfer_review",
+    "transparency_gap"
+  ],
+  "dashboard_cards": [
+    {
+      "tag": "gdpr_relevant",
+      "title": "GDPR relevance likely",
+      "summary": "The company likely needs a GDPR relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "ai_act_relevant",
+      "title": "AI Act relevance likely",
+      "summary": "The company likely needs an AI Act relevance review.",
+      "priority": "medium"
+    },
+    {
+      "tag": "high_risk_ai_candidate",
+      "title": "High-risk AI candidate",
+      "summary": "One or more AI use cases may fall into high-risk AI areas.",
+      "priority": "high"
+    },
+    {
+      "tag": "dpia_candidate",
+      "title": "DPIA candidate",
+      "summary": "The company may need a DPIA or similar impact assessment.",
+      "priority": "medium"
+    },
+    {
+      "tag": "international_transfer_review",
+      "title": "International transfer review",
+      "summary": "Cloud, AI providers, or data transfers outside the EU/EEA should be reviewed.",
+      "priority": "low"
+    },
+    {
+      "tag": "transparency_gap",
+      "title": "AI transparency gap",
+      "summary": "The company may need clearer user-facing AI notices.",
+      "priority": "low"
+    },
+    {
+      "tag": "missing_controls",
+      "title": "Controls to verify",
+      "summary": "Missing or unclear controls: AI system documentation, Internal AI policy, DPIA process, Human oversight, Records of processing, Vendor review",
+      "priority": "medium"
+    }
+  ],
+  "match_query_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "high_risk_ai_candidate",
+    "dpia_candidate",
+    "international_transfer_review",
+    "transparency_gap"
+  ],
+  "next_matching_targets": [
+    "module_web_scraping regulatory events",
+    "source evidence records",
+    "risk scoring rules",
+    "dashboard output contract"
+  ]
+}

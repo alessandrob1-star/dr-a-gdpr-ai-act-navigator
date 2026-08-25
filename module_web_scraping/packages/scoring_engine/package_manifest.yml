@@ -1,0 +1,19 @@
+name: scoring_engine
+status: draft
+owner_area: web_scraping
+runtime: python:3.12-slim
+purpose: Calculate reliability, urgency, regulatory impact, and alert priority.
+default_command: python smoke.py
+inputs:
+  - validation status
+  - source authority levels
+  - topic labels
+  - company profile business impact signals
+outputs:
+  - score dimensions
+  - overall priority
+  - recommended attention text
+next_steps:
+  - Add company-specific business impact scoring.
+  - Add deadline-aware urgency examples.
+  - Calibrate thresholds with stakeholder review.

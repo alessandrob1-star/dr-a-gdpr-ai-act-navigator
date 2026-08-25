@@ -1,0 +1,17 @@
+name: regulatory_data_storage
+status: draft
+owner_area: web_scraping
+runtime: python:3.12-slim
+purpose: Persist monitored items and regulatory events for local MVP demos.
+default_command: python smoke.py
+inputs:
+  - monitored item records
+  - regulatory event records
+  - package storage volume
+outputs:
+  - storage/monitored_items.jsonl
+  - storage/regulatory_events.jsonl
+next_steps:
+  - Create DuckDB schema migrations.
+  - Add import/export commands.
+  - Add query views for dashboard and assistant consumers.

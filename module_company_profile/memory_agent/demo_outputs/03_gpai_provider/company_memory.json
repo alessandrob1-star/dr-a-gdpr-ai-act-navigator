@@ -1,0 +1,438 @@
+{
+  "memory_version": "0.1.0",
+  "created_at": "2026-07-05T18:39:00.900653+00:00",
+  "source_questionnaire": "company_gdpr_ai_act_initial_assessment",
+  "source_completed_at": "2026-06-25T10:10:00.000Z",
+  "company_profile": {
+    "company_name": "NovaModel Labs",
+    "contact_email": "compliance@novamodel.example",
+    "industry": "software_saas",
+    "company_size": "medium",
+    "eu_presence": [
+      "eu_market",
+      "eu_customers"
+    ],
+    "dashboard_priority": "external_evidence"
+  },
+  "ai_profile": {
+    "ai_usage": [
+      "ai_provider",
+      "gpai"
+    ],
+    "ai_functions": [
+      "content_generation",
+      "recommendations"
+    ],
+    "ai_notice": "clear",
+    "sensitive_domains": [
+      "none"
+    ],
+    "delicate_ai_practices": [
+      "none"
+    ]
+  },
+  "privacy_profile": {
+    "personal_data": [
+      "customers_users",
+      "tracking_analytics"
+    ],
+    "profiling_decisions": [
+      "personalized_recommendations"
+    ],
+    "privacy_role": "processor",
+    "extra_eea_transfers": "yes",
+    "extra_eea_providers": [
+      "cloud_hosting",
+      "ai_api_models"
+    ]
+  },
+  "controls": {
+    "existing": [
+      "privacy_policy",
+      "records_processing",
+      "vendor_review",
+      "ai_documentation"
+    ],
+    "missing_or_to_verify": [
+      "Internal AI policy",
+      "Data breach process",
+      "Data subject rights process",
+      "DPIA process",
+      "AI or privacy training"
+    ]
+  },
+  "relevance_tags": [
+    "gdpr_relevant",
+    "ai_act_relevant",
+    "dpia_candidate",
+    "international_transfer_review",
+    "gpai_relevant"
+  ],
+  "assessment_trace": [
+    {
+      "type": "relevance_rule",
+      "rule_id": "gdpr_relevant",
+      "label": "GDPR relevance likely",
+      "points": 14,
+      "triggered_by": [
+        {
+          "question_key": "eu_presence",
+          "selected_values": [
+            "eu_customers",
+            "eu_market"
+          ]
+        },
+        {
+          "question_key": "personal_data",
+          "selected_values": [
+            "customers_users",
+            "tracking_analytics"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 2-3, 5, 24 and 30"
+      ],
+      "recommended_action": "Confirm the processing inventory, lawful bases, notices, roles, and records of processing."
+    },
+    {
+      "type": "relevance_rule",
+      "rule_id": "ai_act_relevant",
+      "label": "AI Act relevance likely",
+      "points": 14,
+      "triggered_by": [
+        {
+          "question_key": "eu_presence",
+          "selected_values": [
+            "eu_customers",
+            "eu_market"
+          ]
+        },
+        {
+          "question_key": "ai_usage",
+          "selected_values": [
+            "ai_provider",
+            "gpai"
+          ]
+        }
+      ],
+      "legal_references": [
+        "AI Act Articles 2-4 and 16-27"
+      ],
+      "recommended_action": "Document the AI value-chain role and classify each AI system before deployment."
+    },
+    {
+      "type": "relevance_rule",
+      "rule_id": "dpia_candidate",
+      "label": "DPIA candidate",
+      "points": 16,
+      "triggered_by": [
+        {
+          "question_key": "personal_data",
+          "selected_values": [
+            "tracking_analytics"
+          ]
+        },
+        {
+          "question_key": "profiling_decisions",
+          "selected_values": [
+            "personalized_recommendations"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 35-36"
+      ],
+      "recommended_action": "Run and document a DPIA screening. The questionnaire signals do not by themselves establish that a full DPIA is mandatory. Complete a DPIA before processing if the screening shows likely high risk; consult the supervisory authority under Article 36 only if the DPIA shows high residual risk without adequate mitigation."
+    },
+    {
+      "type": "relevance_rule",
+      "rule_id": "international_transfer_review",
+      "label": "International transfer review",
+      "points": 10,
+      "triggered_by": [
+        {
+          "question_key": "extra_eea_transfers",
+          "selected_values": [
+            "yes"
+          ]
+        },
+        {
+          "question_key": "extra_eea_providers",
+          "selected_values": [
+            "ai_api_models",
+            "cloud_hosting"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 44-49"
+      ],
+      "recommended_action": "Map destinations and vendors, then verify the transfer mechanism and supplementary measures."
+    },
+    {
+      "type": "relevance_rule",
+      "rule_id": "gpai_relevant",
+      "label": "GPAI relevance likely",
+      "points": 18,
+      "triggered_by": [
+        {
+          "question_key": "ai_usage",
+          "selected_values": [
+            "gpai"
+          ]
+        }
+      ],
+      "legal_references": [
+        "AI Act Articles 51-56"
+      ],
+      "recommended_action": "Determine whether the company is a GPAI provider or downstream deployer and document the applicable duties."
+    },
+    {
+      "type": "missing_controls",
+      "rule_id": "missing_controls",
+      "label": "Missing or unverified controls",
+      "points": 20,
+      "triggered_by": [
+        {
+          "question_key": "controls",
+          "missing_values": [
+            "Internal AI policy",
+            "Data breach process",
+            "Data subject rights process",
+            "DPIA process",
+            "AI or privacy training"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 12-22, 24, 30 and 32",
+        "AI Act Article 4"
+      ],
+      "recommended_action": "Assign owners and evidence for each missing or unverified control."
+    }
+  ],
+  "compliance_score": {
+    "score": 92,
+    "band": "high",
+    "label": "High attention",
+    "explanation": "Score combines relevance tags and missing controls. It is for prioritization, not legal classification.",
+    "raw_score": 92,
+    "breakdown": [
+      {
+        "type": "relevance_rule",
+        "rule_id": "gdpr_relevant",
+        "label": "GDPR relevance likely",
+        "points": 14,
+        "triggered_by": [
+          {
+            "question_key": "eu_presence",
+            "selected_values": [
+              "eu_customers",
+              "eu_market"
+            ]
+          },
+          {
+            "question_key": "personal_data",
+            "selected_values": [
+              "customers_users",
+              "tracking_analytics"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 2-3, 5, 24 and 30"
+        ],
+        "recommended_action": "Confirm the processing inventory, lawful bases, notices, roles, and records of processing."
+      },
+      {
+        "type": "relevance_rule",
+        "rule_id": "ai_act_relevant",
+        "label": "AI Act relevance likely",
+        "points": 14,
+        "triggered_by": [
+          {
+            "question_key": "eu_presence",
+            "selected_values": [
+              "eu_customers",
+              "eu_market"
+            ]
+          },
+          {
+            "question_key": "ai_usage",
+            "selected_values": [
+              "ai_provider",
+              "gpai"
+            ]
+          }
+        ],
+        "legal_references": [
+          "AI Act Articles 2-4 and 16-27"
+        ],
+        "recommended_action": "Document the AI value-chain role and classify each AI system before deployment."
+      },
+      {
+        "type": "relevance_rule",
+        "rule_id": "dpia_candidate",
+        "label": "DPIA candidate",
+        "points": 16,
+        "triggered_by": [
+          {
+            "question_key": "personal_data",
+            "selected_values": [
+              "tracking_analytics"
+            ]
+          },
+          {
+            "question_key": "profiling_decisions",
+            "selected_values": [
+              "personalized_recommendations"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 35-36"
+        ],
+        "recommended_action": "Run and document a DPIA screening. The questionnaire signals do not by themselves establish that a full DPIA is mandatory. Complete a DPIA before processing if the screening shows likely high risk; consult the supervisory authority under Article 36 only if the DPIA shows high residual risk without adequate mitigation."
+      },
+      {
+        "type": "relevance_rule",
+        "rule_id": "international_transfer_review",
+        "label": "International transfer review",
+        "points": 10,
+        "triggered_by": [
+          {
+            "question_key": "extra_eea_transfers",
+            "selected_values": [
+              "yes"
+            ]
+          },
+          {
+            "question_key": "extra_eea_providers",
+            "selected_values": [
+              "ai_api_models",
+              "cloud_hosting"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 44-49"
+        ],
+        "recommended_action": "Map destinations and vendors, then verify the transfer mechanism and supplementary measures."
+      },
+      {
+        "type": "relevance_rule",
+        "rule_id": "gpai_relevant",
+        "label": "GPAI relevance likely",
+        "points": 18,
+        "triggered_by": [
+          {
+            "question_key": "ai_usage",
+            "selected_values": [
+              "gpai"
+            ]
+          }
+        ],
+        "legal_references": [
+          "AI Act Articles 51-56"
+        ],
+        "recommended_action": "Determine whether the company is a GPAI provider or downstream deployer and document the applicable duties."
+      },
+      {
+        "type": "missing_controls",
+        "rule_id": "missing_controls",
+        "label": "Missing or unverified controls",
+        "points": 20,
+        "triggered_by": [
+          {
+            "question_key": "controls",
+            "missing_values": [
+              "Internal AI policy",
+              "Data breach process",
+              "Data subject rights process",
+              "DPIA process",
+              "AI or privacy training"
+            ]
+          }
+        ],
+        "legal_references": [
+          "GDPR Articles 12-22, 24, 30 and 32",
+          "AI Act Article 4"
+        ],
+        "recommended_action": "Assign owners and evidence for each missing or unverified control."
+      }
+    ]
+  },
+  "risk_warnings": [
+    {
+      "level": "medium",
+      "title": "DPIA candidate",
+      "message": "The selected answers indicate DPIA screening factors, but the questionnaire alone does not establish that a full DPIA is mandatory. A DPIA is required when the planned processing is likely to result in high risk; prior consultation follows only when the DPIA identifies high residual risk without adequate mitigation.",
+      "triggered_by": [
+        {
+          "question_key": "personal_data",
+          "selected_values": [
+            "tracking_analytics"
+          ]
+        },
+        {
+          "question_key": "profiling_decisions",
+          "selected_values": [
+            "personalized_recommendations"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 35-36"
+      ],
+      "recommended_action": "Run and document a DPIA screening. The questionnaire signals do not by themselves establish that a full DPIA is mandatory. Complete a DPIA before processing if the screening shows likely high risk; consult the supervisory authority under Article 36 only if the DPIA shows high residual risk without adequate mitigation."
+    },
+    {
+      "level": "medium",
+      "title": "International transfer review",
+      "message": "Extra EU/EEA providers or transfers should be mapped and verified.",
+      "triggered_by": [
+        {
+          "question_key": "extra_eea_transfers",
+          "selected_values": [
+            "yes"
+          ]
+        },
+        {
+          "question_key": "extra_eea_providers",
+          "selected_values": [
+            "ai_api_models",
+            "cloud_hosting"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Articles 44-49"
+      ],
+      "recommended_action": "Map destinations and vendors, then verify the transfer mechanism and supplementary measures."
+    },
+    {
+      "level": "medium",
+      "title": "Missing controls",
+      "message": "Some expected controls are missing or unclear: Internal AI policy, Data breach process, Data subject rights process, DPIA process, AI or privacy training.",
+      "triggered_by": [
+        {
+          "question_key": "controls",
+          "missing_values": [
+            "Internal AI policy",
+            "Data breach process",
+            "Data subject rights process",
+            "DPIA process",
+            "AI or privacy training"
+          ]
+        }
+      ],
+      "legal_references": [
+        "GDPR Article 24",
+        "AI Act Articles 9 and 17"
+      ],
+      "recommended_action": "Assign owners and evidence for each missing or unverified control."
+    }
+  ],
+  "notes": "GPAI/foundation-model provider selling into the EU market."
+}

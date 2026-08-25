@@ -1,0 +1,69 @@
+# Local pre-commit hooks that mirror the CI gates, so problems are caught
+# before a commit is pushed instead of after a red CI run.
+#
+# One-time setup:
+#   python -m pip install pre-commit
+#   pre-commit install
+#
+# Run against everything on demand:
+#   pre-commit run --all-files
+#
+# Keep hook versions current:
+#   pre-commit autoupdate
+#
+# Tool versions are pinned to match .github/workflows/ so local and CI results
+# agree. When you bump ruff/mypy in CI, bump the matching `rev` here too.
+default_language_version:
+  python: python3.12
+
+repos:
+  # General hygiene -----------------------------------------------------------
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=2048"]
+      - id: detect-private-key
+
+  # Formatting + linting (matches the `Lint, format, and type check` CI job) ---
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.21
+    hooks:
+      - id: ruff-format
+        args: ["--check"]
+      - id: ruff
+        name: ruff (lint)
+
+  # Static type checking (matches the mypy step in CI) ------------------------
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v2.2.0
+    hooks:
+      - id: mypy
+        # Run the exact package set CI checks rather than only staged files, so
+        # cross-file type errors are caught the same way. Config lives in
+        # pyproject.toml ([tool.mypy]); third-party imports are treated as
+        # untyped there, so no app dependencies are needed here.
+        pass_filenames: false
+        args:
+          - policy_agent
+          - module_web_scraping
+          - module_agents
+          - module_company_profile/memory_agent/company_memory_agent.py
+          - module_company_profile/memory_agent/run_demo_profiles.py
+          - module_company_profile/dashboard/dashboard_server.py
+          - module_company_profile/dashboard/profile_store.py
+          - module_company_profile/dashboard/report_exporter.py
+          - module_company_profile/tests
+
+  # Secret scanning (matches the gitleaks job in security.yml) -----------------
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+        # Uses the repo's .gitleaks.toml (default ruleset + example-creds allowlist).

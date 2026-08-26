@@ -1,4 +1,4 @@
-# Dr. G.D.P.R. & AI Act navigator
+# Dr. A - G.D.P.R. & AI Act Navigator
 
 An explainable regulatory-intelligence prototype for European SMEs. It turns a
 guided company questionnaire into a company-specific GDPR and EU AI Act risk

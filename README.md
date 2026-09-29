@@ -90,80 +90,6 @@ from the model explanation layer.
 
 ![Acme HR AI dashboard with grounded Dr. A answers](docs/screenshots/dashboard-dr-a-en.png)
 
-### Desktop Dashboard
-
-The native PySide6 dashboard provides the same assessment workflow in a local
-desktop interface configured for Ollama/Qwen by default. It is presented after
-the web page to demonstrate the fully local desktop experience.
-
-#### Assessment overview
-
-![English desktop assessment overview](docs/screenshots/desktop-dashboard/01-assessment-overview-en.png)
-
-English dashboard view showing the selected company profile, deterministic risk
-score, relevant GDPR / AI Act tags, and active assessment state.
-
-![Italian desktop assessment overview](docs/screenshots/desktop-dashboard/01-assessment-overview-it.png)
-
-Italian dashboard view with the same assessment flow localized for the selected
-language.
-
-![Spanish desktop assessment overview](docs/screenshots/desktop-dashboard/01-assessment-overview-es.png)
-
-Spanish dashboard view showing multilingual questionnaire and assessment
-support.
-
-#### Warnings and controls
-
-![English warnings and controls](docs/screenshots/desktop-dashboard/02-warnings-controls-en.png)
-
-English view of risk warnings, existing controls, and missing or to-check
-controls generated from the selected company profile.
-
-![Italian warnings and controls](docs/screenshots/desktop-dashboard/02-warnings-controls-it.png)
-
-Italian view of warnings and control gaps, keeping the deterministic assessment
-explainable in the selected language.
-
-#### Regulatory events and timeline
-
-![English relevant regulatory events](docs/screenshots/desktop-dashboard/03-regulatory-events-en.png)
-
-English regulatory-events tab linking the company profile to GDPR and EU AI Act
-sources with direct references.
-
-![Italian compliance timeline](docs/screenshots/desktop-dashboard/03-compliance-timeline-it.png)
-
-Italian compliance timeline with AI Act / GDPR milestones personalized to the
-active profile.
-
-#### Contextual Help
-
-![English contextual Help](docs/screenshots/desktop-dashboard/04-help-en.png)
-
-English contextual Help explaining the questionnaire, demos, assessment
-calculation, snapshots, and comparison flow.
-
-![Italian contextual Help](docs/screenshots/desktop-dashboard/04-help-it.png)
-
-Italian localized Help guiding the user through the same desktop workflow.
-
-![Spanish contextual Help](docs/screenshots/desktop-dashboard/04-help-es.png)
-
-Spanish localized Help showing the 25-language support for the guided workflow.
-
-#### Grounded Dr. A conversation and Policy Agent safeguard
-
-![English Dr. A chat and Policy Agent block](docs/screenshots/desktop-dashboard/05-dr-a-chat-policy-en.png)
-
-English Dr. A conversation showing grounded DPIA guidance and a Policy Agent
-block for a non-compliant request.
-
-![Italian Dr. A chat and Policy Agent block](docs/screenshots/desktop-dashboard/05-dr-a-chat-policy-it.png)
-
-Italian Dr. A conversation with grounded DPIA guidance and a Policy Agent block
-in the selected language.
-
 ## What It Demonstrates
 
 - A mouse-friendly company onboarding questionnaire localized in all 25 supported languages.
@@ -215,18 +141,9 @@ cd dr-gdpr-ai-act-navigator
 For detailed platform-specific setup and troubleshooting, see the
 **[Installation and Evaluation Guide](docs/INSTALLATION.md)**.
 
-### Choose The Interface
-
-The repo includes two local interfaces:
-
-- **Web page:** browser dashboard served at `http://localhost:8771`.
-- **Desktop dashboard:** native PySide6 dashboard using the local Qwen/Ollama
-  configuration by default.
-
 ### Recommended Company Presentation
 
-The presentation runs entirely on the local Ollama/Qwen model. Start with the
-web page, then open the desktop dashboard.
+The presentation runs entirely in the browser with the local Ollama/Qwen model.
 
 #### 1. Start Ollama/Qwen and show the web page
 
@@ -239,20 +156,6 @@ ollama pull qwen2.5:14b-instruct
 
 The launcher opens `http://localhost:8771`. Present the questionnaire,
 assessment results, regulatory evidence, Progress view, and Dr. A conversation.
-
-#### 2. Show the desktop dashboard
-
-Keep Ollama running, then launch the native dashboard:
-
-```powershell
-.\Start desktop dashboard.bat
-```
-
-The desktop interface uses the same local Qwen model and deterministic
-assessment agents.
-
-On macOS and Linux, use `./Start-Web-Page-Qwen.sh` followed by
-`./Start-Desktop-Dashboard.sh`.
 
 #### Local model configuration
 
@@ -419,7 +322,7 @@ python -m pytest
 
 Tests are auto-discovered (see `[tool.pytest.ini_options]` in `pyproject.toml`),
 so new `test_*.py` files run without editing any command list. The current suite
-contains **133 focused automated tests** covering policy guardrails, the
+contains focused automated tests covering policy guardrails, the
 deterministic guardrail evaluation, legal-citation coverage, regulatory-diff
 freshness, assessment explanations, dashboard behavior, localization, live-feed
 resilience, action-plan approval/evidence gates, EUR-Lex integration, and the

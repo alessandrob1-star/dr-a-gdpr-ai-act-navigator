@@ -1,13 +1,11 @@
 # Installation and Evaluation Guide
 
-The runtime runs locally and can start either the browser web page or the native
-desktop dashboard. Dr. A can use the official OpenAI API or a local
-OpenAI-compatible Ollama/Qwen endpoint.
+The runtime runs locally in the browser. Dr. A can use the official OpenAI API
+or a local OpenAI-compatible Ollama/Qwen endpoint.
 
 ## Requirements
 
-- Python 3.11 or later, or Docker Desktop for the web page
-- PySide6 for the native desktop dashboard; the launcher installs it when needed
+- Python 3.11 or later, or Docker Desktop
 - An OpenAI Platform API key for OpenAI mode, or Ollama with Qwen for local mode
 - Internet access for OpenAI API requests or source refreshes
 
@@ -51,12 +49,6 @@ $env:LOCAL_MODEL_NAME = "qwen2.5:14b-instruct"
 & ".\Start dashboard.bat"
 ```
 
-## Windows Desktop Dashboard
-
-Double-click `Start desktop dashboard.bat`. It opens the PySide6 desktop
-dashboard and uses `LOCAL_MODEL_*` or legacy `QWEN_*` settings, defaulting to
-Ollama at `http://localhost:11434/v1/chat/completions`.
-
 ## macOS and Linux Web Page
 
 Set the key in the current shell and run the dashboard launcher:
@@ -76,13 +68,6 @@ For Ollama/Qwen web mode:
 ollama pull qwen2.5:14b-instruct
 chmod +x Start-Web-Page-Qwen.sh
 ./Start-Web-Page-Qwen.sh
-```
-
-For the native desktop dashboard:
-
-```bash
-chmod +x Start-Desktop-Dashboard.sh
-./Start-Desktop-Dashboard.sh
 ```
 
 ## Docker

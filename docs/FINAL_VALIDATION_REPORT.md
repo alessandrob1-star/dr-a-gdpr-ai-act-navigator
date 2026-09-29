@@ -2,7 +2,7 @@
 
 **Project:** Dr. G.D.P.R. & AI Act navigator
 **Candidate release:** release candidate
-**Validation scope:** local desktop demo, deterministic assessment pipeline,
+**Validation scope:** browser dashboard, deterministic assessment pipeline,
 Dr. A, Policy Agent, localization, reports, Progress, Compliance Action
 Workspace, Help, source refresh, and Docker configuration
 
@@ -25,7 +25,7 @@ The following checks were run against the complete release candidate:
 
 | Check | Result |
 |---|---|
-| Python test suite | **133 passed** |
+| Python test suite | **136 passed** |
 | Deterministic Policy Agent evaluation | **52/52 passed**; 32/32 adversarial cases blocked; 20/20 benign cases allowed |
 | Ruff format check | Passed |
 | Ruff lint check | Passed |
@@ -62,7 +62,6 @@ All manual scenarios below passed for the release candidate.
 | Live source refresh | Refresh gives visual feedback, updates the timestamp, and preserves official/early-warning separation and source links | Passed |
 | Snapshot persistence | Assessment snapshot saves, appears in history, reloads, and preserves the profile and score | Passed |
 | Dutch localization | Questionnaire, Dashboard, Progress, Help, chart labels, timeline, controls, and snapshot actions remain localized | Passed |
-| Desktop responsive behavior | Reduced desktop window width does not create page-level horizontal overflow or unusable controls | Passed |
 
 ## 4. Release evidence
 

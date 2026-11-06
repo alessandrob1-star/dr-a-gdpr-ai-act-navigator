@@ -134,8 +134,8 @@ the compliance classification.
 Clone or download the repository:
 
 ```bash
-git clone https://github.com/alessandrob1-star/dr-gdpr-ai-act-navigator.git
-cd dr-gdpr-ai-act-navigator
+git clone https://github.com/alessandrob1-star/dr-a-gdpr-ai-act-navigator.git
+cd dr-a-gdpr-ai-act-navigator
 ```
 
 For detailed platform-specific setup and troubleshooting, see the

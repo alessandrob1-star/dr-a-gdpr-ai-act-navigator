@@ -2,7 +2,7 @@
 
 > **Status:** data-pipeline design contract. Named stages such as validation and
 > scoring describe deterministic processing components; the current runtime
-> agent boundary is documented in `docs_project/agents.md`.
+> agent boundary is documented in `docs/architecture/agents.md`.
 
 ## Purpose
 

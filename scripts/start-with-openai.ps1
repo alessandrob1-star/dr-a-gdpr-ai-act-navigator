@@ -43,4 +43,4 @@ if (-not $env:OPENAI_API_KEY) {
 }
 
 Write-Host "Starting Dr. G.D.P.R. & AI Act navigator with gpt-5.6-sol."
-& (Join-Path $projectRoot "Start dashboard.bat")
+& (Join-Path $projectRoot "launchers/Start dashboard.bat")

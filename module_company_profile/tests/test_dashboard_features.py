@@ -540,10 +540,10 @@ class DashboardFeatureTests(unittest.TestCase):
         self.assertFalse(thread.is_alive())
 
     def test_launchers_validate_dashboard_identity_and_preserve_model_configuration(self):
-        windows = (ROOT / "Start dashboard.bat").read_text(encoding="utf-8")
-        shell = (ROOT / "Start-Dashboard.sh").read_text(encoding="utf-8")
-        docker_windows = (ROOT / "Start with Docker.bat").read_text(encoding="utf-8")
-        docker_shell = (ROOT / "start-demo.sh").read_text(encoding="utf-8")
+        windows = (ROOT / "launchers" / "Start dashboard.bat").read_text(encoding="utf-8")
+        shell = (ROOT / "launchers" / "Start-Dashboard.sh").read_text(encoding="utf-8")
+        docker_windows = (ROOT / "launchers" / "Start with Docker.bat").read_text(encoding="utf-8")
+        docker_shell = (ROOT / "launchers" / "start-demo.sh").read_text(encoding="utf-8")
 
         self.assertIn("$h.ok -ne $true", windows)
         self.assertIn("$h.model_configured -ne $true", windows)

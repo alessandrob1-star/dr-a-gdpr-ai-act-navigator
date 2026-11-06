@@ -23,7 +23,7 @@ cd ai-act-compliance-navigator
 
 ## Windows Web Page With OpenAI
 
-Double-click `Start with OpenAI.bat`. The launcher requests the API key in a
+Double-click `launchers/Start with OpenAI.bat`. The launcher requests the API key in a
 private prompt, keeps it only in the process environment, starts the dashboard,
 and opens `http://localhost:8771`.
 
@@ -46,7 +46,7 @@ Equivalent manual configuration:
 $env:MODEL_PROVIDER = "local"
 $env:LOCAL_MODEL_ENDPOINT = "http://localhost:11434/v1/chat/completions"
 $env:LOCAL_MODEL_NAME = "qwen2.5:14b-instruct"
-& ".\Start dashboard.bat"
+& ".\launchers/Start dashboard.bat"
 ```
 
 ## macOS and Linux Web Page
@@ -55,8 +55,8 @@ Set the key in the current shell and run the dashboard launcher:
 
 ```bash
 export OPENAI_API_KEY="your-project-key"
-chmod +x Start-Dashboard.sh
-./Start-Dashboard.sh
+chmod +x launchers/Start-Dashboard.sh
+./launchers/Start-Dashboard.sh
 ```
 
 Avoid placing the key directly in shell history on shared computers. A secure

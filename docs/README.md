@@ -14,9 +14,9 @@ Navigator implementation.
 - [`DEMO_CHECKLIST.md`](DEMO_CHECKLIST.md): repeatable manual smoke test.
 - [`FINAL_VALIDATION_REPORT.md`](FINAL_VALIDATION_REPORT.md): automated and
   manual validation evidence for the release candidate.
-- [`../docs_project/architecture.md`](../docs_project/architecture.md): current
+- [`architecture/architecture.md`](architecture/architecture.md): current
   technical architecture.
-- [`../docs_project/agents.md`](../docs_project/agents.md): implemented agent
+- [`architecture/agents.md`](architecture/agents.md): implemented agent
   boundaries and handoffs.
 
 ## Operational and validation documents
@@ -25,3 +25,9 @@ Navigator implementation.
 - `dashboard-output-contract.md`: dashboard data contract.
 - source, event, monitoring, and scoring specifications in this folder document
   the deterministic regulatory pipeline.
+
+## Folder guide
+
+- `docs/`: installation, validation, contracts, and current implementation guides.
+- [`architecture/`](architecture/): architecture, agents, data sources, and historical planning documents identified as such.
+- [`reference/`](reference/): reviewed institutional source documents; their original terms apply.

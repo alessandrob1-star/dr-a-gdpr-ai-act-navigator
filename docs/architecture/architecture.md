@@ -141,8 +141,8 @@ No production database, cloud account, or external translation API is required.
 
 The project supports:
 
-- native Windows start through `Start dashboard.bat`;
-- native macOS/Linux start through `Start-Dashboard.sh`;
+- native Windows start through `launchers/Start dashboard.bat`;
+- native macOS/Linux start through `launchers/Start-Dashboard.sh`;
 - reproducible OpenAI-enabled dashboard startup through Docker Compose;
 - process-scoped authentication through `OPENAI_API_KEY`.
 

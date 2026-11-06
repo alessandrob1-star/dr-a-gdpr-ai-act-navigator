@@ -141,6 +141,10 @@ cd dr-gdpr-ai-act-navigator
 For detailed platform-specific setup and troubleshooting, see the
 **[Installation and Evaluation Guide](docs/INSTALLATION.md)**.
 
+The two Qwen launchers in the repository root are the primary entry points.
+Shared native launchers and optional OpenAI/Docker launchers live in
+[`launchers/`](launchers/README.md).
+
 ### Recommended Company Presentation
 
 The presentation runs entirely in the browser with the local Ollama/Qwen model.
@@ -165,7 +169,7 @@ Equivalent environment variables:
 $env:MODEL_PROVIDER = "local"
 $env:LOCAL_MODEL_ENDPOINT = "http://localhost:11434/v1/chat/completions"
 $env:LOCAL_MODEL_NAME = "qwen2.5:14b-instruct"
-& ".\Start dashboard.bat"
+& ".\launchers/Start dashboard.bat"
 ```
 
 ### Web Page With OpenAI (Alternative)
@@ -174,7 +178,7 @@ Requirements: Windows 10/11, Python 3.11 or later, and an OpenAI Platform API
 key with API billing or credits enabled.
 
 1. Clone or download the repository.
-2. Double-click `Start with OpenAI.bat`.
+2. Double-click `launchers/Start with OpenAI.bat`.
 3. Enter the API key in the private prompt.
 4. Open `http://localhost:8771` if the browser does not open automatically.
 
@@ -184,15 +188,15 @@ Close the launcher window or press `Ctrl+C` to stop the web server.
 
 ```bash
 export OPENAI_API_KEY="your-project-key"
-chmod +x start-demo.sh stop-demo.sh
-./start-demo.sh
+chmod +x launchers/start-demo.sh launchers/stop-demo.sh
+./launchers/start-demo.sh
 ```
 
 The script runs the same OpenAI configuration in Docker and opens
 `http://localhost:8771` when ready. Stop with:
 
 ```bash
-./stop-demo.sh
+./launchers/stop-demo.sh
 ```
 
 ### AI assistant runtime
@@ -205,18 +209,18 @@ Dr. A supports two model providers without changing the assessment logic:
 
 The recommended company presentation uses local mode and does not require an
 OpenAI API key. Set `MODEL_PROVIDER=local`, or use one of the Qwen launchers.
-For OpenAI mode, `Start with OpenAI.bat` stores the API key outside the
+For OpenAI mode, `launchers/Start with OpenAI.bat` stores the API key outside the
 repository using Windows DPAPI, encrypted for the current Windows account.
 
 ```powershell
 $env:OPENAI_API_KEY = "your-project-key"
-& ".\Start dashboard.bat"
+& ".\launchers/Start dashboard.bat"
 ```
 
 On macOS and Linux:
 
 ```bash
-OPENAI_API_KEY="your-project-key" ./Start-Dashboard.sh
+OPENAI_API_KEY="your-project-key" ./launchers/Start-Dashboard.sh
 ```
 
 ## Five-Minute Demo
@@ -307,8 +311,9 @@ module_agents/
   dr_a_agent.py                  Grounded OpenAI orchestration
 policy_agent/         Deterministic chat input and output safeguards
 docs/                 Data contracts and engineering specifications
-docs_project/         Architecture, agents, and technical references
-docs_official_documents/  Reviewed GDPR and AI Act source material
+docs/architecture/    Architecture, agents, and technical references
+docs/reference/       Reviewed GDPR and AI Act source material
+launchers/            Shared launchers and optional OpenAI/Docker start/stop scripts
 storage/web_scraping_outputs/  Curated startup data used by the dashboard
 ```
 
@@ -390,9 +395,9 @@ packages.
 - [Presentation-oriented code walkthrough](docs/CODE_WALKTHROUGH.md)
 - [System design document](docs/DESIGN_DOCUMENT.md)
 - [Installation and evaluation](docs/INSTALLATION.md)
-- [Architecture](docs_project/architecture.md)
-- [Agent structure](docs_project/agents.md)
-- [Regulatory data sources](docs_project/data-sources.md)
+- [Architecture](docs/architecture/architecture.md)
+- [Agent structure](docs/architecture/agents.md)
+- [Regulatory data sources](docs/architecture/data-sources.md)
 - [Dashboard output contract](docs/dashboard-output-contract.md)
 - [Risk and reliability scoring](docs/risk-reliability-scoring-draft.md)
 - [Source monitoring architecture](docs/source-monitoring-module-architecture.md)

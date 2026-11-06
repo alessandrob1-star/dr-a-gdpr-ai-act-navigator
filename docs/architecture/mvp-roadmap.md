@@ -3,7 +3,7 @@
 > **Status:** original 11-week planning baseline retained for project history.
 > It is not the current architecture or an implementation-status checklist. See
 > [`architecture.md`](architecture.md), [`agents.md`](agents.md), and the root
-> [`README.md`](../README.md) for the implemented system.
+> [`README.md`](../../README.md) for the implemented system.
 
 ## Original Timeline Assumption
 

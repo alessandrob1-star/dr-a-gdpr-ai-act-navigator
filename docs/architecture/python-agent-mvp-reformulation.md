@@ -4,7 +4,7 @@
 > FastAPI, vector retrieval, and additional agents that are not part of the
 > current executable MVP. For the implemented architecture, use
 > [`architecture.md`](architecture.md), [`agents.md`](agents.md), and
-> [`../docs/CODE_WALKTHROUGH.md`](../docs/CODE_WALKTHROUGH.md).
+> [`../docs/CODE_WALKTHROUGH.md`](../CODE_WALKTHROUGH.md).
 
 ## Project Overview
 
@@ -271,7 +271,7 @@ data/
   vector_index/
   app.db
 
-docs_project/
+docs/architecture/
   architecture.md
   agents.md
   scoring-model.md

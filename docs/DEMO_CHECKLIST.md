@@ -8,8 +8,8 @@ recorded demo or release check.
 1. Pull the latest approved `main` branch or the branch being reviewed.
 2. Confirm that `OPENAI_API_KEY` is configured for Dr. A.
 3. Start the dashboard with the local launcher:
-   - Windows: `Start dashboard.bat`
-   - Docker: `Start with Docker.bat`
+   - Windows: `launchers/Start dashboard.bat`
+   - Docker: `launchers/Start with Docker.bat`
 4. Open the dashboard at `http://localhost:8771`.
 
 ## Core dashboard smoke test

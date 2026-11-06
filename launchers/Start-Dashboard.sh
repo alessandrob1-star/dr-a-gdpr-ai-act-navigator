@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 PYTHON_EXE="$ROOT/.venv/bin/python"
 

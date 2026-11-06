@@ -1,7 +1,7 @@
 # Source Monitoring Implementation Roadmap
 
 > **Status:** original implementation plan retained for traceability. Current
-> runtime behavior is documented in `docs_project/architecture.md` and
+> runtime behavior is documented in `docs/architecture/architecture.md` and
 > `docs/CODE_WALKTHROUGH.md`.
 
 ## Purpose

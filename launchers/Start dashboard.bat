@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set "ROOT=%~dp0"
+for %%I in ("%~dp0..") do set "ROOT=%%~fI\"
 set "PYTHON_EXE=%ROOT%.venv\Scripts\python.exe"
 if "%ASSISTANT_NAME%"=="" set "ASSISTANT_NAME=Dr. A"
 if "%DASHBOARD_PORT%"=="" set "DASHBOARD_PORT=8771"

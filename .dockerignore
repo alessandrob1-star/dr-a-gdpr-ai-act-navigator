@@ -14,5 +14,5 @@ outputs
 tmp
 module_company_profile/memory_agent/sample_output
 module_company_profile/memory_agent/demo_outputs
-docs_official_documents
+docs/reference
 jira-import
